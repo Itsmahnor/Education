@@ -7,6 +7,7 @@ import { FaBars } from "react-icons/fa6";
 import { useState } from 'react';
 import { FaPlus } from "react-icons/fa6";
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from 'react-router';
 
 export const BottomNav = () => {
   // handle toggle
@@ -24,7 +25,8 @@ export const BottomNav = () => {
      </div>
      {/* link section */}
      <div className='flex justify-center items-center gap-7 left-nav'>
-<span>Home</span>
+      <Link to="/">
+<span className='text-orange-500'>Home</span></Link>
 <div className='flex gap-1 justify-center items-center'>
 <span>Courses</span>
 <MdOutlineKeyboardArrowDown />
