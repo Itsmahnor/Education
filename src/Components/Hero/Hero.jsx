@@ -5,7 +5,7 @@ export const Hero = () => {
     <div className='w-[100vw] lg:h-[80vh]   bg-orange-950 flex justify-center items-center text-orange-500 font-bold text-[1.2rem]'>
 <div className='w-[80vw] flex justify-around bottom  flex-wrap  lg:h-[70vh] gap-3 '>
 {/* Left div for content */}
-<div className='lg:flex-1 flex flex-col justify-center '>
+<div className='lg:flex-1 flex flex-col justify-center  px-3'>
   <div className='flex gap-2  items-center'> 
   <FaBookOpen   />
   <span className=''>100% TEACH ONLINE</span>

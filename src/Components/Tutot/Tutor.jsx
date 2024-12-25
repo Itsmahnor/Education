@@ -49,8 +49,8 @@ export const Tutor = () => {
 // Header Section Component
 const HeaderSection = () => (
   <div>
-    <p className="text-center">IDEAL TUTOR EVERYONE</p>
-    <h1 className="md:text-[3rem] font-bold text-center">Qualified Online Tutors</h1>
+    <p className="text-center animate">IDEAL TUTOR EVERYONE</p>
+    <h1 className="md:text-[3rem] font-bold text-center animate">Qualified Online Tutors</h1>
   </div>
 );
 

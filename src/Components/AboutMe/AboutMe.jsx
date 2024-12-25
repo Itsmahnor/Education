@@ -5,7 +5,9 @@ export const AboutMe = () => {
   return (
     <div className="w-[100vw] h-auto pt-20 bg-orange-950 flex justify-center text-orange-500  text-[1.2rem] ">
     <div className="w-100 lg:mx-28 mx-13  h-auto flex flex-wrap  ">
+         {/* img section */}
     <div className="md:w-[50%] md:h-[70%] flex gap-7  flex-wrap justify-center items-center ">
+   
 <div className="w-100 h-100 p-2 relative overflow-hidden text-center  ">
 <img 
   src="https://skillseducation.pk/assets/skillsimages/nav-icons/meeeeee.png" 
@@ -20,6 +22,7 @@ export const AboutMe = () => {
   </p>
 </div>
 </div>
+{/* text section */}
 <div className="md:w-[50%]  p-5 h-auto flex justify-start   flex-col ">
 <h3 className="text-[20px] font-bold">About me</h3>
 <h1 className='md:w-[30vw] md:text-[3rem] font-bold'>Educated Over 30,000+ Students In Pakistan</h1>

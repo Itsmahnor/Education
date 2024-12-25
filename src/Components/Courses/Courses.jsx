@@ -29,6 +29,7 @@ export const Courses = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: false,
+    centermargin: "1rem", 
     responsive: [
   
       {
@@ -59,46 +60,60 @@ export const Courses = () => {
 // Header Section Component
 const HeaderSection = () => (
   <div>
-    <p className="text-center">BROWSE TOP COURSES</p>
-    <h1 className="md:text-[3rem] font-bold text-center">Most Popular Courses</h1>
+    <p className="text-center animate">BROWSE TOP COURSES</p>
+    <h1 className="md:text-[3rem] font-bold text-center animate">Most Popular Courses</h1>
   </div>
 );
 
 // Slider Component
 const CategorySlider = ({ settings }) => (
-  <Slider {...settings}>
-    {Course.map((item, index) => (
-   
-   <div key={index} className='w-[420px]  h-auto bg-orange-500 rounded-3xl
-   '>
-     <div className='md:m-4 m-2 '>
-     <img src={item.img} alt="" className=' h-[350px] object-cover rounded-2xl filter brightness-75 transition duration-300 hover:brightness-50 cursor-pointer '  />
-     <div className='flex justify-between flex-wrap'>
-     <div className='flex gap-1'>
-     <div className='flex  mt-3  '>    <span className='text-yellow-500 text-[1.5rem]  '><IoMdStar /></span>
-     <span className='text-yellow-500 text-[1.5rem]  '><IoMdStar /></span>   <span className='text-yellow-500 text-[1.5rem] '><IoMdStar /></span></div>
-<span className='text-black mt-3
-'>(5.0)</span>
-     </div>
-     <span className='text-black font-bold mt-3 text-[1.2rem]'>{item.rupees} /-</span>
-     </div>
-<h1 className='text-black text-[1.3rem] font-bold mt-4'>{item.title}</h1>
-     </div>
-<div className='m-4 flex justify-between flex-wrap '>
-<div className='flex gap-1 text-black'><span><FaRegUserCircle className='mt-1' /></span> <span className=''>By: Umair Farooqi</span></div>
-<div className='flex gap-1 text-black '><span><IoMdTime className='mt-1' /></span> <span className=''> {item.duration}:Month</span></div>
-<div className='flex gap-1 text-black '><span><FaRegUserCircle className='mt-1' /></span> <span className=''>Duration</span></div>
 
-</div>
-</div>
+<Slider {...settings} className="flex gap-4">
+  {Course.map((item, index) => (
+    <div key={index} className="w-[420px] h-auto bg-orange-500 rounded-3xl">
+      <div className="md:m-4 m-2">
+        <img
+          src={item.img}
+          alt=""
+          className="h-[350px] object-cover rounded-2xl filter brightness-75 transition duration-300 hover:brightness-50 cursor-pointer"
+        />
+        <div className="flex justify-between flex-wrap">
+          <div className="flex gap-1">
+            <div className="flex mt-3">
+              <span className="text-yellow-500 text-[1.5rem]"><IoMdStar /></span>
+              <span className="text-yellow-500 text-[1.5rem]"><IoMdStar /></span>
+              <span className="text-yellow-500 text-[1.5rem]"><IoMdStar /></span>
+            </div>
+            <span className="text-black mt-3">(5.0)</span>
+          </div>
+          <span className="text-black font-bold mt-3 text-[1.2rem]">{item.rupees} /-</span>
+        </div>
+        <h1 className="text-black text-[1.3rem] font-bold mt-4">{item.title}</h1>
+      </div>
+      <div className="m-4 flex justify-between flex-wrap">
+        <div className="flex gap-1 text-black">
+          <span><FaRegUserCircle className="mt-1" /></span>
+          <span>By: Umair Farooqi</span>
+        </div>
+        <div className="flex gap-1 text-black">
+          <span><IoMdTime className="mt-1" /></span>
+          <span>{item.duration}:Month</span>
+        </div>
+        <div className="flex gap-1 text-black">
+          <span><FaRegUserCircle className="mt-1" /></span>
+          <span>Duration</span>
+        </div>
+      </div>
+    </div>
+  ))}
+</Slider>
 
-    ))}
-  </Slider>
 );
+
 
 // Grid Component for larger screens
 const CategoryGrid = () => (
-  <div className="grid grid-cols-3 gap-0">
+  <div className="grid grid-cols-3 gap-0 ">
     { Course.map((item, index) => (
       <div key={index} className='w-[420px] h-auto bg-orange-500 rounded-3xl
         '>
