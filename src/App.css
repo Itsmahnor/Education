@@ -9,7 +9,19 @@ body{
   color: black !important;
 }
 
-
+@media(max-width:1618px){
+  .search {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media(max-width:770px){
+  .search {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   
+  }
+}
  a{
   text-decoration: none !important;
  
@@ -27,6 +39,16 @@ body{
 background-color: white;
 }
 /* bottom nav responsiveness */
+@media(max-width:2000px){
+  .widthof{
+    width: 71vw;
+  }
+}
+@media(max-width:1528px){
+  .widthof{
+    width: auto;
+  }
+}
 .bar{
   display: none;
 }
@@ -35,7 +57,7 @@ background-color: white;
 width: 100vw;
 }
 }
-@media(max-width:1225px){
+@media(max-width:1340px){
   .hide {
 display: none;
   }

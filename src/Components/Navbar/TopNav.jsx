@@ -13,7 +13,7 @@ export const TopNav = () => {
   <p className='text-[1rem] pt-2 '>+923276381819 | info@skillseducation.pk</p>
 </div>
 <div className='flex gap-8 justify-center items-center '>
-  <Link to="register">
+  <Link to="/register">
 <div className="flex gap-2  justify-center items-center register1 ">
 <FaRegUserCircle />
 <p className='text-[1rem] pt-2 register1 '>Register</p>

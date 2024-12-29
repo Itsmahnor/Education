@@ -7,8 +7,10 @@ import { IoMdStar } from "react-icons/io";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import { SlCalender } from "react-icons/sl";
+import { Link } from 'react-router';
 export const Courses = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+
 
   // Check screen size on window resize
   useEffect(() => {
@@ -128,7 +130,11 @@ const CategoryGrid = () => (
           </div>
           <span className='text-black font-bold mt-3 text-[1.2rem]'>{item.rupees} /-</span>
           </div>
-   <h1 className='text-black text-[1.3rem] font-bold mt-4'>{item.title}</h1>
+       
+          <Link to={`select${item.title}`}>
+  <h1 className="text-black text-[1.3rem] font-bold mt-4">{item.title}</h1>
+</Link>
+
           </div>
 <div className='m-4 flex justify-between flex-wrap  '>
 <div className='flex gap-1 text-black'><span><FaRegUserCircle className='mt-1' /></span> <span className=''>By: Umair Farooqi</span></div>

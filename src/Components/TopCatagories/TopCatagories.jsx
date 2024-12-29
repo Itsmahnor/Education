@@ -60,7 +60,7 @@ const HeaderSection = () => (
 const CategorySlider = ({ settings }) => (
   <Slider {...settings}>
     {Data.map((item, index) => (
-      <div key={index} className='w-[240px]  h-[350px] animate'>
+      <div key={index} className='w-[240px]  h-[350px] '>
         <div className='bg-orange-600 rounded-[40%] border-[3px] border-dotted border-white h-[330px] w-[240px] text-black flex flex-col justify-center items-center gap-3 p-4'>
           <div className='w-[150px] h-[150px] flex justify-center items-center border-[3px] border-dashed border-black rounded-full'>
             <span className='text-[3rem]'>{item.img}</span>
