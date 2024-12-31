@@ -54,124 +54,24 @@ export const BottomNav = () => {
   </div>
 </div>
 
-  {/* Dropdown */}
-  {/* <div className="group-hover:flex hidden bg-orange-500 text-black widthof border  md:w-auto h-auto absolute top-[90px] left-1/2 transform -translate-x-1/2 p-6 shadow-lg rounded-md z-10 flex-col" >
-    <div className="flex justify-between gap-6">
-        
-           <div className="flex flex-col gap-3">
-        <h3 className="text-lg font-semibold">AI PROGRAMS</h3>
-        <ul className="flex flex-col gap-2">
-          <li className="flex items-center gap-2">
-            <FaPython /> Python Programming
-          </li>
-          <li className="flex items-center gap-2">
-            <FaRobot /> Generative AI
-          </li>
-          <li className="flex items-center gap-2">
-            <FaRobot /> Machine Learning
-          </li>
-          <li className="flex items-center gap-2">
-            <FaRobot /> Chatbot Development
-          </li>
-        </ul>
-      </div>
-
-      <div className="flex flex-col gap-3">
-        <h3 className="text-lg font-semibold">DEVELOPMENT</h3>
-        <ul className="flex flex-col gap-2">
-          <li className="flex items-center gap-2">
-            <SiMongodb /> Mern Stack Development
-          </li>
-          <li className="flex items-center gap-2">
-            <FaPython /> Python Django Development
-          </li>
-          <li className="flex items-center ">
-            <FaLaravel /> PHP Laravel Development
-          </li>
-          <li className="flex items-center gap-2">
-            <FaReact /> Frontend Development
-          </li>
-          <li className="flex items-center gap-2">
-            <FaReact /> Backend Development
-          </li>
-          <li className="flex items-center gap-2">
-            <FaReact /> React JS Development
-          </li>
-          <li className="flex items-center gap-2">
-            <FaWordpress /> WordPress Development
-          </li>
-          <li className="flex items-center gap-2">
-            <SiShopify /> Shopify Development
-          </li>
-        </ul>
-      </div>
-
-     
-      <div className="flex flex-col gap-3">
-        <h3 className="text-lg font-semibold">APP DEVELOPMENT</h3>
-        <ul className="flex flex-col gap-2">
-          <li className="flex items-center gap-2">
-            <SiFlutter /> Flutter App Development
-          </li>
-          <li className="flex items-center gap-2">
-            <FaReact /> React Native App Development
-          </li>
-          <li className="flex items-center gap-2">
-            <SiFlutter /> FlutterFlow App Development
-          </li>
-          <li className="flex items-center gap-2">
-            <FaAndroid /> Android App Development
-          </li>
-        </ul>
-      </div>
-
  
-
-      <div className="flex flex-col gap-3">
-        <h3 className="text-lg font-semibold">MARKETING PROGRAMS</h3>
-        <ul className="flex flex-col gap-2">
-          <li className="flex items-center gap-2">
-            <SiGoogleads /> Social Media Marketing
-          </li>
-          <li className="flex items-center gap-2">
-            <SiGoogleads /> Digital Marketing
-          </li>
-          <li className="flex items-center gap-2">
-            <SiGoogleads /> Google Ads
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div> */}
 </button>
-
-
-
- 
-  
-
-
-
-<div className='flex gap-1 justify-center items-center relative group'>
-<span>Operatunities</span> 
-<MdOutlineKeyboardArrowDown />
-<div className="group-hover:flex hidden bg-orange-500 border text-black lg:w-[11vw] md:w-auto h-auto absolute top-[50px] left-1/2 transform -translate-x-1/2 p-2 cursor-pointer shadow-lg rounded-md z-10 flex-col">
-<div className="flex flex-col gap-3">
-      
-        <ul className="flex flex-col gap-2">
-          <li className="py-2">
-             Intership offer
-          </li>
-          <li className="py-1">
-       Become tutor
-          </li>
-          <li className="py-1">
-           Job Offer
-          </li>
-        </ul>
-      </div>
+<div className="flex gap-1 justify-center items-center relative group cursor-pointer">
+  <span>Opportunities</span>
+  <MdOutlineKeyboardArrowDown />
+  <div className="group-hover:flex hidden bg-orange-500 border text-black lg:w-[11vw] md:w-auto h-auto absolute top-[30px] left-1/2 transform -translate-x-1/2 p-2 cursor-pointer shadow-lg rounded-md z-10 flex-col">
+    <div className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-2">
+        <Link to="/internship">
+        <li className="py-2 relative text-black">Internship Offer</li></Link>
+        <li className="py-2 relative text-black">Become Tutor</li>
+        <li className="py-2 relative text-black">Job Offer</li>
+      </ul>
+    </div>
+  </div>
 </div>
-</div>
+
+
 <div className="relative group">
       {/* Parent Button */}
       <button className="text-orange-500 px-4 py-2 rounded-md flex items-center gap-2 ">
