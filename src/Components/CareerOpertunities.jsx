@@ -11,8 +11,8 @@ const CareerOpportunities = () => {
   ];
 
   return (
-    <div className="bg-orange-950 text-[#f4a500] py-16 px-4 w-[100vw] flex justify-center ">
-       <section className="w-[50vw] ">
+    <div className="bg-orange-950 text-[#f4a500] py-16 px-4 w-[100vw] flex justify-center  ">
+       <section className="md:w-[50vw] ">
       <h2 className="text-2xl font-bold text-center mb-8">
         Career Opportunities & Earning Potential After Completing the Course
       </h2>

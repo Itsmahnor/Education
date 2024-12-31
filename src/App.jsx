@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import './App.css';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Register } from "./Pages/Register";
 import { FindProgram } from "./Pages/FindProgram";
-import { PHP } from "./Pages/PHP";
-import { FullSack } from "./Pages/FullSack";
-import { AppDevelop } from "./Pages/AppDevelop";
+import { MainContent } from "./Components/CoursesPage/MainComponent";
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import coursesData from './Components/CoursesPage/MainComponent.json';
 
 export default function App() {
   const ErrorPage = () => (
@@ -18,48 +17,21 @@ export default function App() {
   );
 
   const router = createBrowserRouter([
+    { path: "/", element: <Home />, errorElement: <ErrorPage /> },
+    { path: "/register", element: <Register />, errorElement: <ErrorPage /> },
+    { path: "/findProgram", element: <FindProgram />, errorElement: <ErrorPage /> },
+
+    // Dynamic route for course details
     {
-      path: "/",
-      element: <Home />,
+      path: `/course/:courseId`, 
+      element: <MainContent courses={coursesData} />, 
       errorElement: <ErrorPage />,
-    },
-    {
-      path: "/register",
-      element: <Register />,
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: "/findProgram",
-      element: <FindProgram />,
-      errorElement: <ErrorPage />,
-    },
-    {
-      path: "/selectPHP Laravel Development",
-      element: <PHP />,
-    },
-    {
-      path: "/selectMern Stack Web Development",
-      element: <FullSack />,
-    },
-    {
-      path: "/selectApp Development",
-      element: <AppDevelop />,
-    },
-    {
-      path: "/PHP Laravel Development",
-      element: <PHP />,
-    },
-    {
-      path: "/development/mern-stack",
-      element: <FullSack />,
-    },
-    {
-      path: "/App Development",
-      element: <AppDevelop />,
     },
   ]);
 
   return (
-    <RouterProvider router={router} />
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }

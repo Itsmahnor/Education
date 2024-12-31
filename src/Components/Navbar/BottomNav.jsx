@@ -35,14 +35,14 @@ export const BottomNav = () => {
 <button className="text-orange-500 px-4 py-2 rounded-md flex justify-center items-center gap-2 relative group">
   Courses
   <MdOutlineKeyboardArrowDown />
-  <div className="group-hover:flex hidden bg-orange-500 text-black widthof border md:w-auto h-auto absolute top-[90px] left-1/2 transform -translate-x-1/2 p-6 shadow-lg rounded-md z-10 flex-col">
+  <div className="group-hover:flex hidden bg-orange-500 text-black widthof border md:w-auto h-auto absolute top-[50px] left-1/2 transform -translate-x-1/2 p-6 shadow-lg rounded-md z-10 flex-col">
   <div className="flex justify-between gap-6">
     {coursesData.map((category) => (
       <div className="flex flex-col gap-3 text-black" key={category.category}>
         <h3 className="text-lg font-semibold text-black">{category.category}</h3>
         <ul className="flex flex-col gap-2 text-black">
           {category.courses.map((course) => (
-            <Link to={course.route} key={course.name}>
+            <Link to={`/course/${course.route}`} key={course.name}>
               <li className="flex items-center gap-2 cursor-pointer text-black">
                 <course.icon /> {course.name}
               </li>
