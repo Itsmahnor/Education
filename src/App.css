@@ -27,7 +27,7 @@ body{
  
 }
 /* top nav Responsiveness */
-@media(max-width:720px){
+@media(max-width:1000px){
   .hideRes {
     display: none;
   }
@@ -39,48 +39,72 @@ body{
 background-color: white;
 }
 /* bottom nav responsiveness */
-@media(max-width:2000px){
-  .widthof{
+/* General Styling for Large Screens */
+@media (max-width: 2000px) {
+  .widthof {
     width: 71vw;
   }
 }
-@media(max-width:1528px){
-  .widthof{
+
+@media (max-width: 1195px) {
+  .widthof {
     width: auto;
   }
 }
-.bar{
-  display: none;
+
+/* Adjusting Bottom Width for Medium Screens */
+@media (max-width: 1528px) {
+  .bottom {
+    width: 97vw;
+  }
 }
-@media(max-width:1528px){
-.bottom {
-width: 100vw;
-}
-}
-@media(max-width:1340px){
+
+/* Hiding Elements and Adjusting Layout for Small Screens */
+@media (max-width: 1250px) {
   .hide {
-display: none;
+    display: none;
   }
   .bottom {
     width: 80vw;
-    }
-    .left-nav {
-      font-size: 1rem;
-    }
-  
+  }
+  .left-nav {
+    font-size: 1rem;
+    display: flex;
+  }
+}
+
+/* Mobile View: Display Bar and Hide Left Navigation */
+@media (max-width: 1095px) {
+  .bar {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-nav {
+    display: none;
   }
 
-  @media(max-width:1046px){
-.bar{
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
 }
-.left-nav{
-  display: none;
+
+/* Extra Improvements for Mobile Screens */
+@media (max-width: 768px) {
+  .bottom {
+    padding: 0 10px;
+  }
+  .widthof {
+    width: 90vw;
+  }
 }
+
+@media (max-width: 480px) {
+  .bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
    
-    } 
+    
 /* mobile view styling */
     .offcanvas {
       background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */
