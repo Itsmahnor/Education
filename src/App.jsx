@@ -8,6 +8,11 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import coursesData from './Components/CoursesPage/MainComponent.json';
 import { Internship } from "./Pages/Internship";
+import { BecomeTutor } from "./Pages/BecomeTutor";
+import { JobOpertunities } from "./Pages/JobOpertunities";
+import { Contact } from "./Pages/Contact";
+import { WhyChooseUs } from "./Pages/WhyChooseUs";
+import { Instructors } from "./Pages/Instructors";
 
 export default function App() {
   const ErrorPage = () => (
@@ -22,7 +27,12 @@ export default function App() {
     { path: "/register", element: <Register />, errorElement: <ErrorPage /> },
     { path: "/findProgram", element: <FindProgram />, errorElement: <ErrorPage /> },
     { path: "/internship", element: <Internship />, errorElement: <ErrorPage /> },
-   
+    { path: "/tutor", element: <BecomeTutor />, errorElement: <ErrorPage /> },
+    { path: "/job", element: <JobOpertunities />, errorElement: <ErrorPage /> },
+    { path: "/contact", element: <Contact />, errorElement: <ErrorPage /> },
+    { path: "/choose", element: <WhyChooseUs />, errorElement: <ErrorPage /> },
+    { path: "/instructors", element: <Instructors />, errorElement: <ErrorPage /> },
+
     // Dynamic route for course details
     {
       path: `/course/:courseId`, 
