@@ -10,13 +10,13 @@ export const Hero = () => {
         {/* Left section for text content */}
         <div className='lg:flex-1 flex flex-col justify-center px-3'>
           {/* Icon and headline */}
-          <div className='flex gap-2 items-center text-[#098E68]'> 
+          <div className='flex gap-2 items-center text-[#ffff]'> 
             <FaBookOpen size={24} />
             <span>100% TEACH ONLINE</span>
           </div>
 
           {/* Main heading */}
-          <h1 className='md:text-[4rem] font-bold text-[#098E68]'>Online Platform Education</h1>
+          <h1 className='md:text-[4rem] font-bold text-[#ffff]'>Online Platform Education</h1>
 
           {/* Subtext paragraph */}
           <p className='text-[#b8b8b8] mt-4'>

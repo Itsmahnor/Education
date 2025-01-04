@@ -10,7 +10,7 @@ export const TopNav = () => {
     <div className='bg-[#098E68] w-[100vw] flex justify-center items-center m-0 p-0 TopNavRes'>
       <div className='w-[80vw] flex justify-around items-center topnavwidth'>
 <div className='hideRes flex'>
-  <p className='text-[1rem] pt-2 text-white '>+923276381819 | info@skillseducation.pk</p>
+  <p className='text-[1rem] pt-2 text-white '>+923276381819 | info@ProLernoX.pk</p>
 </div>
 <div className='flex gap-8 justify-center items-center '>
   <Link to="/register">

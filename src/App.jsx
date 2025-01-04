@@ -13,6 +13,11 @@ import { JobOpertunities } from "./Pages/JobOpertunities";
 import { Contact } from "./Pages/Contact";
 import { WhyChooseUs } from "./Pages/WhyChooseUs";
 import { Instructors } from "./Pages/Instructors";
+import {PHP} from './Pages/PHP';
+import {FullSack} from './Pages/FullSack';
+import {AppDevelop} from './Pages/AppDevelop';
+
+
 
 export default function App() {
   const ErrorPage = () => (
@@ -32,6 +37,9 @@ export default function App() {
     { path: "/contact", element: <Contact />, errorElement: <ErrorPage /> },
     { path: "/choose", element: <WhyChooseUs />, errorElement: <ErrorPage /> },
     { path: "/instructors", element: <Instructors />, errorElement: <ErrorPage /> },
+    { path: "/PHP Laravel Development", element: <PHP />   , errorElement: <ErrorPage /> },
+    { path: "/Mern Stack Web Development", element: <FullSack />, errorElement: <ErrorPage /> },
+    { path: "/App Development", element: <AppDevelop />, errorElement: <ErrorPage /> },
 
     // Dynamic route for course details
     {

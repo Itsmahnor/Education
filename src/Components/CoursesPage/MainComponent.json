@@ -3,7 +3,7 @@
     "courseId": "1",
     "header": {
       "title": "Python Programming",
-      "description": "Master the art of <span class='bg-orange-950 text-orange-500 p-1'> Python </span> development. Python is a versatile, easy-to-learn, and powerful programming language used in web development, data science, machine learning, and more. This course will equip you with the skills to create efficient and scalable applications using Python's extensive libraries and frameworks."
+      "description": "Master the art of <span class='bg-[#04211e] text-white p-1'> Python </span> development. Python is a versatile, easy-to-learn, and powerful programming language used in web development, data science, machine learning, and more. This course will equip you with the skills to create efficient and scalable applications using Python's extensive libraries and frameworks."
     },
     "firstHeading": "Master Python Programming",
     "firstHeadingDescription": "Explore the world of Python, a powerful language that is beginner-friendly yet capable of tackling complex programming challenges. This course provides hands-on training and real-world examples to sharpen your coding skills.",

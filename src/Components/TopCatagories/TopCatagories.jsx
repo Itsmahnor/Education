@@ -28,15 +28,15 @@ export const TopCatagories = () => {
         settings: { slidesToShow: 2 },
       },
       {
-        breakpoint: 610,
+        breakpoint: 600,
         settings: { slidesToShow: 1 },
       },
     ],
   };
 
   return (
-    <div className='w-[100vw] lg:h-[80vh] pt-5 bg-orange-950 flex justify-center text-orange-500 font-bold text-[1.2rem]'>
-      <div className=' w-[80vw] h-auto flex justify-around flex-wrap gap-3 flex-col'>
+    <div className='w-[100vw] lg:h-[80vh] pt-5 bg-[#04211e] flex justify-center text-[#ffffff] font-bold text-[1.2rem]'>
+      <div className='w-[80vw] h-auto flex justify-around flex-wrap gap-3 flex-col'>
         {/* Section Header */}
         <HeaderSection />
         {/* Slider Component */}
@@ -51,8 +51,10 @@ export const TopCatagories = () => {
 // Header Section Component
 const HeaderSection = () => (
   <div>
-    <p className='text-center animate'>OUR TOP CATEGORIES</p>
-    <h1 className='md:text-[3rem] font-bold text-center animate'>Browse Learn Skills You Need</h1>
+    <p className='text-center text-[#ffffff] animate'>OUR TOP CATEGORIES</p>
+    <h1 className='md:text-[3rem] font-bold text-center text-[#ffffff] animate'>
+      Browse Learn Skills You Need
+    </h1>
   </div>
 );
 
@@ -60,13 +62,13 @@ const HeaderSection = () => (
 const CategorySlider = ({ settings }) => (
   <Slider {...settings}>
     {Data.map((item, index) => (
-      <div key={index} className='w-[240px]  h-[350px] '>
-        <div className='bg-orange-600 rounded-[40%] border-[3px] border-dotted border-white h-[330px] w-[240px] text-black flex flex-col justify-center items-center gap-3 p-4'>
-          <div className='w-[150px] h-[150px] flex justify-center items-center border-[3px] border-dashed border-black rounded-full'>
+      <div key={index} className='w-[240px] sm:w-[200px] h-[350px] '>
+        <div className='bg-[#098E68] rounded-[40%] border-[3px] border-dotted border-[#ffffff] h-[330px] w-[240px] text-[#04211e] flex flex-col justify-center items-center gap-3 p-4'>
+          <div className='w-[150px] h-[150px] flex justify-center items-center border-[3px] border-dashed text-white border-[#ffffff] bg-[#04211e]   rounded-full'>
             <span className='text-[3rem]'>{item.img}</span>
           </div>
-          <h4>{item.title}</h4>
-          <p className='text-black'>{item.Para}</p>
+          <h4 className='text-[#ffffff]'>{item.title}</h4>
+          <p className='text-[#04211e]'>{item.Para}</p>
         </div>
       </div>
     ))}

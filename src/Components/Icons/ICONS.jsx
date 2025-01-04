@@ -29,18 +29,16 @@ export const ICONS = () => {
     autoplaySpeed: 5000,
     arrows: false,
     responsive: [
-  
       {
         breakpoint: 630,
-        settings: { slidesToShow: 2},
+        settings: { slidesToShow: 2 },
       },
     ],
   };
 
   return (
-    <div className="w-[100vw] h-[30vh] md:pt-16 bg-orange-950 flex justify-center text-orange-500 ">
-      <div className="w-full h-auto flex justify-around flex-wrap gap-10 bg-orange-500 items-center">
-      
+    <div className="w-[100vw] h-[30vh] md:pt-16 bg-[#04211e] flex justify-center text-[#098E68]">
+      <div className="w-full h-auto flex justify-around flex-wrap gap-10 bg-[#098E68] items-center">
         {/* Slider or Grid */}
         <div className="lg:w-[70vw] w-[90vw]">
           {isSmallScreen ? (
@@ -53,9 +51,6 @@ export const ICONS = () => {
     </div>
   );
 };
-
-
-
 
 // Slider Component
 const CategorySlider = ({ settings }) => (
@@ -98,14 +93,13 @@ const CategorySlider = ({ settings }) => (
   </Slider>
 );
 
-
 // Grid Component for larger screens
 const CategoryGrid = () => (
   <div className="grid grid-cols-5 gap-0 animate">
-   <img src="https://skillseducation.pk/assets/img/brand/brand-2-1.png" alt="img1" />
-<img src="https://skillseducation.pk/assets/img/brand/brand-2-2.png" alt="img2" />
-<img src="https://skillseducation.pk/assets/img/brand/brand-2-3.png" alt="img2" />
-<img src="https://skillseducation.pk/assets/img/brand/brand-2-4.png" alt="img2" />
-<img src="https://skillseducation.pk/assets/img/brand/brand-2-5.png" alt="img2" />
+    <img src="https://skillseducation.pk/assets/img/brand/brand-2-1.png" alt="img1" />
+    <img src="https://skillseducation.pk/assets/img/brand/brand-2-2.png" alt="img2" />
+    <img src="https://skillseducation.pk/assets/img/brand/brand-2-3.png" alt="img3" />
+    <img src="https://skillseducation.pk/assets/img/brand/brand-2-4.png" alt="img4" />
+    <img src="https://skillseducation.pk/assets/img/brand/brand-2-5.png" alt="img5" />
   </div>
-); 
+);

@@ -26,30 +26,30 @@ export const MainContent = ({ courses }) => {
     <>
       <TopNav />
       <BottomNav />
-      <div className="w-full bg-orange-950 text-orange-500">
+      <div className="w-full bg-[#04211e] text-white">
         {selectedCourse ? (
           <>
-            <div className="breadcrumb-wrapper md:h-[50vh] flex justify-center items-center flex-col">
-              <h1 className="text-orange-950 font-bold text-4xl">{selectedCourse.header.title}</h1>
+            <div className="breadcrumb-wrapper md:h-[50vh]  flex justify-center items-center flex-col">
+              <h1 className="text-[#ffff] font-bold text-4xl">{selectedCourse.header.title}</h1>
               <p
-                className="w-[70vw] text-lg text-orange-950 mt-4 text-center"
+                className="w-[70vw] text-lg text-[#b8b8b8] mt-4 text-center"
                 dangerouslySetInnerHTML={{ __html: selectedCourse.header.description }}
               ></p>
             </div>
 
-            <div className="w-[100vw] flex justify-center items-center pt-16 bg-orange-950 text-orange-500 flex-col">
+            <div className="w-[100vw] flex justify-center items-center pt-16 bg-[#04211e] text-white flex-col">
               <div className="md:w-[80vw] w-[95vw] flex lg:flex-row flex-col gap-7 justify-between">
                 <div className="lg:w-[60%]">
-                  <h1 className="text-4xl font-extrabold ">{selectedCourse.firstHeading}</h1>
-                  <p className="text-lg text-gray-200 mt-4">{selectedCourse.firstHeadingDescription}</p>
+                  <h1 className="text-4xl font-extrabold text-[#ffff]">{selectedCourse.firstHeading}</h1>
+                  <p className="text-lg text-[#b8b8b8] mt-4">{selectedCourse.firstHeadingDescription}</p>
 
                   <div className="pt-7">
-                    <h2 className="text-2xl font-semibold ">Overview</h2>
+                    <h2 className="text-2xl font-semibold text-white">Overview</h2>
                     <p className="text-lg mt-4">{selectedCourse.overview}</p>
 
                     <div className="pt-7">
-                      <h2 className="text-xl font-semibold ">What You Will Learn</h2>
-                      <ul className="list-disc pl-5 space-y-2">
+                      <h2 className="text-xl font-semibold text-white">What You Will Learn</h2>
+                      <ul className="list-disc pl-5 space-y-2 text-[#b8b8b8]">
                         {selectedCourse.whatYouWillLearn.map((learningPoint, index) => (
                           <li key={index}>{learningPoint}</li>
                         ))}
@@ -58,11 +58,11 @@ export const MainContent = ({ courses }) => {
                   </div>
 
                   <div className="mt-10">
-                    <h2 className="text-2xl font-semibold ">Course Outline</h2>
+                    <h2 className="text-2xl font-semibold text-white">Course Outline</h2>
                     {selectedCourse.outline.map((item, index) => (
                       <div key={index} className="m-4">
                         <div
-                          className="font-semibold text-lg text-orange-400  outline py-2  px-2 rounded  flex justify-between items-center cursor-pointer"
+                          className="font-semibold text-lg text-white transition-all duration-500 overflow-hidden outline py-2 px-2 rounded bg-[#064d3b] flex justify-between items-center cursor-pointer"
                           onClick={() => toggleOutlineItem(index)}
                         >
                           <p>{item.month}: {item.title}</p>
@@ -78,12 +78,12 @@ export const MainContent = ({ courses }) => {
                         {openOutlineItems[index] && (
                           <div className="pl-6 pt-3 space-y-3">
                             <div>
-                              <h3 className="font-bold text-lg">{item.subTitle1}</h3>
-                              <p className="text-sm text-gray-200">{item.subTitle1Content}</p>
+                              <h3 className="font-bold text-lg text-[#098E68]">{item.subTitle1}</h3>
+                              <p className="text-sm text-[#b8b8b8]">{item.subTitle1Content}</p>
                             </div>
                             <div>
-                              <h3 className="font-bold text-lg">{item.subTitle2}</h3>
-                              <p className="text-sm text-gray-200">{item.subTitle2Content}</p>
+                              <h3 className="font-bold text-lg text-[#098E68]">{item.subTitle2}</h3>
+                              <p className="text-sm text-[#b8b8b8]">{item.subTitle2Content}</p>
                             </div>
                           </div>
                         )}
@@ -92,12 +92,12 @@ export const MainContent = ({ courses }) => {
                   </div>
                 </div>
 
-                <div className="lg:w-[35%] w-full lg:h-[35vh] bg-orange-500 rounded-lg flex flex-col justify-center items-center text-black font-bold md:text-[1.1rem] p-5 shadow-lg">
+                <div className="lg:w-[35%] w-full lg:h-[35vh] bg-[#098E68] rounded-lg flex flex-col justify-center items-center text-black font-bold md:text-[1.1rem] p-5 shadow-lg">
                   <div className="w-full space-y-4">
-                    <h3 className="text-xl font-semibold">Course Details</h3>
+                    <h3 className="text-xl text-white font-semibold">Course Details</h3>
                     <div className="space-y-4 mt-6">
-                      <div className="flex justify-between">
-                        <p className="font-bold">Duration:</p>
+                      <div className="flex justify-between ">
+                        <p className="font-bold ">Duration:</p>
                         <p>{selectedCourse.details?.duration}</p>
                       </div>
                       <div className="flex justify-between">
@@ -119,7 +119,7 @@ export const MainContent = ({ courses }) => {
             </div>
           </>
         ) : (
-          <div className="text-center text-white mt-16">Course not found.</div>
+          <div className="text-center text-[#b8b8b8] mt-16">Course not found.</div>
         )}
       </div>
       <CareerOpportunities />

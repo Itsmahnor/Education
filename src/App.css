@@ -60,7 +60,7 @@ background-color: white;
 }
 
 /* Hiding Elements and Adjusting Layout for Small Screens */
-@media (max-width: 1250px) {
+@media (max-width: 1618px) {
   .hide {
     display: none;
   }
@@ -144,7 +144,7 @@ background-color: white;
     .breadcrumb-wrapper {
       position: relative; /* Needed for the pseudo-element to position properly */
       overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */
-      background-color: orange; /* Placeholder background (light gray) */
+      background-color: #098E68; /* Placeholder background (light gray) */
     
       padding: 20px; /* Adds some spacing */
      
