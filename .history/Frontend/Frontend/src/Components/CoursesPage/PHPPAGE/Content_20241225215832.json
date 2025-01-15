@@ -1,0 +1,18 @@
+[
+  {
+    "month":1,
+    "title":"Introduction to PHP and Laravel",
+    "subTitle1":"PHP Basics",
+    "subTitle1Content":"Learn the basics of PHP programming, syntax, and its applications in web development.",
+     "subTitle2":"Introduction to Laravel",
+    "subTitle2Content":"Understand Laravel's MVC architecture, routing, and installation process."
+  },
+  {
+    "month":2,
+    "title":"Database Integration with MYSQL",
+    "subTitle1":"PHP Basics",
+    "subTitle1Content":"Learn the basics of PHP programming, syntax, and its applications in web development.",
+     "subTitle2":"Introduction to Laravel",
+    "subTitle2Content":"Understand Laravel's MVC architecture, routing, and installation process."
+  }
+]

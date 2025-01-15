@@ -1,0 +1,70 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Components/CoursesPage/PHPPAGE/Content.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1735145630467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735145734290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n [\r\n   {\r\n     \"month\":1,\r\n-    \"title\":\"Introduction to PHP and Laravel\"\r\n+    \"title\":\"Introduction to PHP and Laravel\",\r\n+    \"subTitle1\":\"PHP Basics\",\r\n+    \"subTitleContent\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\"\r\n   }\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735145761617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,9 @@\n   {\r\n     \"month\":1,\r\n     \"title\":\"Introduction to PHP and Laravel\",\r\n     \"subTitle1\":\"PHP Basics\",\r\n-    \"subTitleContent\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\"\r\n+    \"subTitle1Content\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\",\r\n+     \"subTitle2\":\"PHP Basics\",\r\n+    \"subTitle2Content\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\"\r\n   }\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735145783770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n     \"month\":1,\r\n     \"title\":\"Introduction to PHP and Laravel\",\r\n     \"subTitle1\":\"PHP Basics\",\r\n     \"subTitle1Content\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\",\r\n-     \"subTitle2\":\"PHP Basics\",\r\n-    \"subTitle2Content\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\"\r\n+     \"subTitle2\":\"Introduction to Laravel\",\r\n+    \"subTitle2Content\":\"Understand Laravel's MVC architecture, routing, and installation process.\"\r\n   }\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735145912735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,14 @@\n     \"subTitle1\":\"PHP Basics\",\r\n     \"subTitle1Content\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\",\r\n      \"subTitle2\":\"Introduction to Laravel\",\r\n     \"subTitle2Content\":\"Understand Laravel's MVC architecture, routing, and installation process.\"\r\n+  },\r\n+  {\r\n+    \"month\":2,\r\n+    \"title\":\"Database Integration with MYSQL\",\r\n+    \"subTitle1\":\"PHP Basics\",\r\n+    \"subTitle1Content\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\",\r\n+     \"subTitle2\":\"Introduction to Laravel\",\r\n+    \"subTitle2Content\":\"Understand Laravel's MVC architecture, routing, and installation process.\"\r\n   }\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735145961649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   },\r\n   {\r\n     \"month\":2,\r\n     \"title\":\"Database Integration with MYSQL\",\r\n-    \"subTitle1\":\"PHP Basics\",\r\n-    \"subTitle1Content\":\"Learn the basics of PHP programming, syntax, and its applications in web development.\",\r\n-     \"subTitle2\":\"Introduction to Laravel\",\r\n-    \"subTitle2Content\":\"Understand Laravel's MVC architecture, routing, and installation process.\"\r\n+    \"subTitle1\":\"Database Design\",\r\n+    \"subTitle1Content\":\"Learn to design and manage databases using MySQL for your Laravel applications..\",\r\n+     \"subTitle2\":\"Eloquent ORM\",\r\n+    \"subTitle2Content\":\"Master Laravel's Eloquent ORM for database interactions..\"\r\n   }\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146199483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,14 @@\n     \"subTitle1\":\"Database Design\",\r\n     \"subTitle1Content\":\"Learn to design and manage databases using MySQL for your Laravel applications..\",\r\n      \"subTitle2\":\"Eloquent ORM\",\r\n     \"subTitle2Content\":\"Master Laravel's Eloquent ORM for database interactions..\"\r\n-  }\r\n+  },\r\n+  {\r\n+    \"month\":3,\r\n+    \"title\":\"Building RestFull Api\",\r\n+    \"subTitle1\":\"Database Design\",\r\n+    \"subTitle1Content\":\"Learn to design and manage databases using MySQL for your Laravel applications..\",\r\n+     \"subTitle2\":\"Eloquent ORM\",\r\n+    \"subTitle2Content\":\"Master Laravel's Eloquent ORM for database interactions..\"\r\n+  },\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146240848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n   },\r\n   {\r\n     \"month\":3,\r\n     \"title\":\"Building RestFull Api\",\r\n-    \"subTitle1\":\"Database Design\",\r\n-    \"subTitle1Content\":\"Learn to design and manage databases using MySQL for your Laravel applications..\",\r\n-     \"subTitle2\":\"Eloquent ORM\",\r\n-    \"subTitle2Content\":\"Master Laravel's Eloquent ORM for database interactions..\"\r\n+    \"subTitle1\":\"API Fundamentals\",\r\n+    \"subTitle1Content\":\"Understand the fundamentals of REST APIs and how to create them using Laravel.\",\r\n+     \"subTitle2\":\"Authentication and Security\",\r\n+    \"subTitle2Content\":\"Implement authentication systems and secure your APIs.\"\r\n   },\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146323750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,13 @@\n     \"subTitle1Content\":\"Understand the fundamentals of REST APIs and how to create them using Laravel.\",\r\n      \"subTitle2\":\"Authentication and Security\",\r\n     \"subTitle2Content\":\"Implement authentication systems and secure your APIs.\"\r\n   },\r\n+  {\r\n+    \"month\":4,\r\n+    \"title\":\"Frontent Integration\",\r\n+    \"subTitle1\":\"API Fundamentals\",\r\n+    \"subTitle1Content\":\"Understand the fundamentals of REST APIs and how to create them using Laravel.\",\r\n+     \"subTitle2\":\"Authentication and Security\",\r\n+    \"subTitle2Content\":\"Implement authentication systems and secure your APIs.\"\r\n+  },\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146396802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,10 @@\n   },\r\n   {\r\n     \"month\":4,\r\n     \"title\":\"Frontent Integration\",\r\n-    \"subTitle1\":\"API Fundamentals\",\r\n-    \"subTitle1Content\":\"Understand the fundamentals of REST APIs and how to create them using Laravel.\",\r\n-     \"subTitle2\":\"Authentication and Security\",\r\n-    \"subTitle2Content\":\"Implement authentication systems and secure your APIs.\"\r\n+    \"subTitle1\":\"HTML, CSS, and Bootstrap\",\r\n+    \"subTitle1Content\":\"Integrate frontend designs using HTML, CSS, and Bootstrap frameworks\",\r\n+     \"subTitle2\":\"Vue.js Basics\",\r\n+    \"subTitle2Content\":\"Learn how to use Vue.js to enhance interactivity in Laravel projects.\"\r\n   },\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146432493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,13 @@\n     \"subTitle1Content\":\"Integrate frontend designs using HTML, CSS, and Bootstrap frameworks\",\r\n      \"subTitle2\":\"Vue.js Basics\",\r\n     \"subTitle2Content\":\"Learn how to use Vue.js to enhance interactivity in Laravel projects.\"\r\n   },\r\n+  {\r\n+    \"month\":5,\r\n+    \"title\":\"Advance Features\",\r\n+    \"subTitle1\":\"HTML, CSS, and Bootstrap\",\r\n+    \"subTitle1Content\":\"Integrate frontend designs using HTML, CSS, and Bootstrap frameworks\",\r\n+     \"subTitle2\":\"Vue.js Basics\",\r\n+    \"subTitle2Content\":\"Learn how to use Vue.js to enhance interactivity in Laravel projects.\"\r\n+  },\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146498250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,10 @@\n   },\r\n   {\r\n     \"month\":5,\r\n     \"title\":\"Advance Features\",\r\n-    \"subTitle1\":\"HTML, CSS, and Bootstrap\",\r\n-    \"subTitle1Content\":\"Integrate frontend designs using HTML, CSS, and Bootstrap frameworks\",\r\n-     \"subTitle2\":\"Vue.js Basics\",\r\n-    \"subTitle2Content\":\"Learn how to use Vue.js to enhance interactivity in Laravel projects.\"\r\n+    \"subTitle1\":\"Queues and Jobs\",\r\n+    \"subTitle1Content\":\"Use Laravel queues and jobs to handle asynchronous tasks.\",\r\n+     \"subTitle2\":\"Testing and Debugging\",\r\n+    \"subTitle2Content\":\"Learn how to test and debug your Laravel applications.\"\r\n   },\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146592405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,5 +38,13 @@\n     \"subTitle1Content\":\"Use Laravel queues and jobs to handle asynchronous tasks.\",\r\n      \"subTitle2\":\"Testing and Debugging\",\r\n     \"subTitle2Content\":\"Learn how to test and debug your Laravel applications.\"\r\n   },\r\n+  {\r\n+    \"month\":6,\r\n+    \"title\":\"Deployement and Final Project\",\r\n+    \"subTitle1\":\"Queues and Jobs\",\r\n+    \"subTitle1Content\":\"Use Laravel queues and jobs to handle asynchronous tasks.\",\r\n+     \"subTitle2\":\"Testing and Debugging\",\r\n+    \"subTitle2Content\":\"Learn how to test and debug your Laravel applications.\"\r\n+  }\r\n ]\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735146767855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,10 @@\n   },\r\n   {\r\n     \"month\":6,\r\n     \"title\":\"Deployement and Final Project\",\r\n-    \"subTitle1\":\"Queues and Jobs\",\r\n-    \"subTitle1Content\":\"Use Laravel queues and jobs to handle asynchronous tasks.\",\r\n-     \"subTitle2\":\"Testing and Debugging\",\r\n-    \"subTitle2Content\":\"Learn how to test and debug your Laravel applications.\"\r\n+    \"subTitle1\":\"Hosting Applications\",\r\n+    \"subTitle1Content\":\"Deploy your Laravel applications to live servers..\",\r\n+     \"subTitle2\":\"Final Project\",\r\n+    \"subTitle2Content\":\"Build and present a complete Laravel-based application as your final project.\"\r\n   }\r\n ]\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1735145630467,
+            "name": "Commit-0",
+            "content": "[\r\n  {\r\n    \"month\":1,\r\n    \"title\":\"Introduction to PHP and Laravel\"\r\n  }\r\n]"
+        }
+    ]
+}

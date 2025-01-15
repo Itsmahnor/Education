@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow-x: hidden;
+}
+.register1{
+  color: black !important;
+}
+a{
+  text-decoration: none !important;
+ 
+}
+li a{
+  text-decoration: none;
+ 
+}
+/* top nav Responsiveness */
+@media(max-width:720px){
+  .hideRes {
+    display: none;
+  }
+  .topnavwidth{
+   width: auto;
+  }
+}
+.white-background {
+background-color: white;
+}
+/* bottom nav responsiveness */
+.bar{
+  display: none;
+}
+@media(max-width:1528px){
+.bottom {
+width: 100vw;
+}
+}
+@media(max-width:1225px){
+  .hide {
+display: none;
+  }
+  .bottom {
+    width: 80vw;
+    }
+    .left-nav {
+      font-size: 1rem;
+    }
+  
+  }
+
+  @media(max-width:1046px){
+.bar{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.left-nav{
+  display: none;
+}
+   
+    } 
+/* mobile view styling */
+    .offcanvas {
+      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */
+      color: white;
+    }
+    .cross {
+      color: white !important;
+    }
+/* icons section */
+    .slider-item {
+      padding: 0 20px; /* Adjust gap between slides */
+    }
+    
+    .slider-image {
+      width: 100%; /* Ensures the images fit within the container */
+      object-fit: contain; /* Prevents stretching of images */
+    }
+
+    /* animation */
+    .animate{
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0 cover 40%;
+    }
+    @keyframes appear {
+      from{
+        opacity: 0;
+        scale: 0.5;
+      }
+      to {
+        opacity: 1;
+        scale: 1;
+      }
+    }
+
+    /* styling for register slider */
+    .breadcrumb-wrapper {
+      position: relative; /* Needed for the pseudo-element to position properly */
+      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */
+      background-color: orange; /* Placeholder background (light gray) */
+    
+      padding: 20px; /* Adds some spacing */
+     
+    }
+    
+    .breadcrumb-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%; /* Starts completely off-screen to the left */
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.3) 10%, 
+        rgba(255, 255, 255, 0) 50%, 
+        rgba(255, 255, 255, 0.3) 90%
+      );
+      background-size: 200% 100%; /* Double the width to allow for smooth sliding */
+      animation: slide 3s linear infinite; /* Applies the shimmering animation */
+    }
+    
+    /* Keyframes for the sliding effect */
+    @keyframes slide {
+      from {
+        left: -100%; /* Start off-screen on the left */
+      }
+      to {
+        left: 100%; /* Move off-screen to the right */
+      }
+    }
+    

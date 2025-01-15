@@ -1,0 +1,34 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Components/CoursesPage/AppDEvelopment/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1735214164628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735214221956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper md:h-[50vh] flex justify-center items-center flex-col \">\r\n- <h1 className='text-orange-950 font-bold'>Full Stack PHP and Laravel Development</h1>\r\n+ <h1 className='text-orange-950 font-bold'>Flutter and Dart App Development</h1>\r\n  <p className='w-[70vw]'>Dive into <span className='bg-orange-950 text-orange-500 p-1'> PHP </span> and <span className='bg-orange-950 text-orange-500 p-1'>  Laravel </span> development to build powerful, dynamic, and scalable web applications. PHP is a popular server-side scripting language, and Laravel is a robust PHP framework that streamlines application development with its elegant syntax and built-in features like routing, authentication, and ORM. In this course, you'll learn how to develop, test, and deploy full-stack applications using PHP and Laravel.</p>\r\n   </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735214240296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper md:h-[50vh] flex justify-center items-center flex-col \">\r\n  <h1 className='text-orange-950 font-bold'>Flutter and Dart App Development</h1>\r\n- <p className='w-[70vw]'>Dive into <span className='bg-orange-950 text-orange-500 p-1'> PHP </span> and <span className='bg-orange-950 text-orange-500 p-1'>  Laravel </span> development to build powerful, dynamic, and scalable web applications. PHP is a popular server-side scripting language, and Laravel is a robust PHP framework that streamlines application development with its elegant syntax and built-in features like routing, authentication, and ORM. In this course, you'll learn how to develop, test, and deploy full-stack applications using PHP and Laravel.</p>\r\n+ <p className='w-[70vw]'>Master the art of mobile app development with Flutter and Dart. Learn how to create high-performance, visually appealing mobile applications using the Flutter framework and the Dart programming language. Build both Android and iOS applications from a single codebase and deploy them efficiently across multiple platforms.</p>\r\n   </div>\r\n   )\r\n }\r\n  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735214294084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper md:h-[50vh] flex justify-center items-center flex-col \">\r\n  <h1 className='text-orange-950 font-bold'>Flutter and Dart App Development</h1>\r\n- <p className='w-[70vw]'>Master the art of mobile app development with Flutter and Dart. Learn how to create high-performance, visually appealing mobile applications using the Flutter framework and the Dart programming language. Build both Android and iOS applications from a single codebase and deploy them efficiently across multiple platforms.</p>\r\n+ <p className='w-[70vw]'>Master the art of <span className='bg-orange-950 text-orange-500 p-1'> mobile app development </span> with Flutter and Dart. Learn how to create high-performance, visually appealing mobile applications using the Flutter framework and the Dart programming language. Build both Android and iOS applications from a single codebase and deploy them efficiently across multiple platforms.</p>\r\n   </div>\r\n   )\r\n }\r\n\\ No newline at end of file\n- \n"
+                },
+                {
+                    "date": 1736070707463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper md:h-[50vh] flex justify-center items-center flex-col \">\r\n- <h1 className='text-orange-950 font-bold'>Flutter and Dart App Development</h1>\r\n- <p className='w-[70vw]'>Master the art of <span className='bg-orange-950 text-orange-500 p-1'> mobile app development </span> with Flutter and Dart. Learn how to create high-performance, visually appealing mobile applications using the Flutter framework and the Dart programming language. Build both Android and iOS applications from a single codebase and deploy them efficiently across multiple platforms.</p>\r\n+ <h1 className='text-white font-bold'>Flutter and Dart App Development</h1>\r\n+ <p className='w-[70vw]'>Master the art of <span className='bg-[#04211e] text-white p-1'> mobile app development </span> with Flutter and Dart. Learn how to create high-performance, visually appealing mobile applications using the Flutter framework and the Dart programming language. Build both Android and iOS applications from a single codebase and deploy them efficiently across multiple platforms.</p>\r\n   </div>\r\n\\ No newline at end of file\n   )\r\n-}\n+}\r\n"
+                }
+            ],
+            "date": 1735214164628,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const Header = () => {\r\n  return (\r\n    <div class=\"breadcrumb-wrapper md:h-[50vh] flex justify-center items-center flex-col \">\r\n <h1 className='text-orange-950 font-bold'>Full Stack PHP and Laravel Development</h1>\r\n <p className='w-[70vw]'>Dive into <span className='bg-orange-950 text-orange-500 p-1'> PHP </span> and <span className='bg-orange-950 text-orange-500 p-1'>  Laravel </span> development to build powerful, dynamic, and scalable web applications. PHP is a popular server-side scripting language, and Laravel is a robust PHP framework that streamlines application development with its elegant syntax and built-in features like routing, authentication, and ORM. In this course, you'll learn how to develop, test, and deploy full-stack applications using PHP and Laravel.</p>\r\n  </div>\r\n  )\r\n}\r\n "
+        }
+    ]
+}

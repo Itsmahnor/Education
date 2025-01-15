@@ -1,0 +1,42 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Pages/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1734938333468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1734939038095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { AboutMe } from \"../Components/AboutMe/AboutMe\";\r\n import { Courses } from \"../Components/Courses/Courses\";\r\n import { Hero } from \"../Components/Hero/Hero\";\r\n+import { Icons } from \"../Components/Icons/Icons\";\r\n import { BottomNav } from \"../Components/Navbar/BottomNav\";\r\n import { TopNav } from \"../Components/Navbar/TopNav\";\r\n import { TopCatagories } from \"../Components/TopCatagories/TopCatagories\";\r\n import { Tutor } from \"../Components/Tutot/Tutor\";\r\n@@ -16,8 +17,9 @@\n     <TopCatagories />\r\n     <AboutMe />\r\n     <Courses />\r\n <Tutor />\r\n+<Icons />\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1734939073132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,13 @@\n     <TopCatagories />\r\n     <AboutMe />\r\n     <Courses />\r\n <Tutor />\r\n-<Icons />\r\n \r\n \r\n \r\n \r\n+\r\n     </>\r\n    );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1734939111382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { AboutMe } from \"../Components/AboutMe/AboutMe\";\r\n import { Courses } from \"../Components/Courses/Courses\";\r\n import { Hero } from \"../Components/Hero/Hero\";\r\n-import { Icons } from \"../Components/Icons/Icons\";\r\n+\r\n import { BottomNav } from \"../Components/Navbar/BottomNav\";\r\n import { TopNav } from \"../Components/Navbar/TopNav\";\r\n import { TopCatagories } from \"../Components/TopCatagories/TopCatagories\";\r\n import { Tutor } from \"../Components/Tutot/Tutor\";\r\n"
+                },
+                {
+                    "date": 1734939119020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { AboutMe } from \"../Components/AboutMe/AboutMe\";\r\n import { Courses } from \"../Components/Courses/Courses\";\r\n import { Hero } from \"../Components/Hero/Hero\";\r\n+import { ICONS } from \"../Components/Icons/Icons\";\r\n \r\n import { BottomNav } from \"../Components/Navbar/BottomNav\";\r\n import { TopNav } from \"../Components/Navbar/TopNav\";\r\n import { TopCatagories } from \"../Components/TopCatagories/TopCatagories\";\r\n@@ -17,13 +18,13 @@\n     <TopCatagories />\r\n     <AboutMe />\r\n     <Courses />\r\n <Tutor />\r\n+<ICONS />\r\n \r\n \r\n \r\n \r\n-\r\n     </>\r\n    );\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1735101838838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     <Hero />\r\n     <TopCatagories />\r\n     <AboutMe />\r\n     <Courses />\r\n-<Tutor />\r\n-<ICONS />\r\n+    <Tutor />\r\n+    <ICONS />\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1735103815082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { AboutMe } from \"../Components/AboutMe/AboutMe\";\r\n import { Courses } from \"../Components/Courses/Courses\";\r\n+import Footer from \"../Components/Footer/Footer\";\r\n import { Hero } from \"../Components/Hero/Hero\";\r\n import { ICONS } from \"../Components/Icons/Icons\";\r\n \r\n import { BottomNav } from \"../Components/Navbar/BottomNav\";\r\n@@ -19,12 +20,12 @@\n     <AboutMe />\r\n     <Courses />\r\n     <Tutor />\r\n     <ICONS />\r\n+<Footer />\r\n \r\n \r\n \r\n-\r\n     </>\r\n    );\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1734938333468,
+            "name": "Commit-0",
+            "content": "import { AboutMe } from \"../Components/AboutMe/AboutMe\";\r\nimport { Courses } from \"../Components/Courses/Courses\";\r\nimport { Hero } from \"../Components/Hero/Hero\";\r\nimport { BottomNav } from \"../Components/Navbar/BottomNav\";\r\nimport { TopNav } from \"../Components/Navbar/TopNav\";\r\nimport { TopCatagories } from \"../Components/TopCatagories/TopCatagories\";\r\nimport { Tutor } from \"../Components/Tutot/Tutor\";\r\n\r\n\r\nfunction Home() {\r\n  return ( \r\n    <>\r\n    <TopNav />\r\n    <BottomNav />\r\n    <Hero />\r\n    <TopCatagories />\r\n    <AboutMe />\r\n    <Courses />\r\n<Tutor />\r\n\r\n\r\n\r\n\r\n    </>\r\n   );\r\n}\r\n\r\nexport default Home;"
+        }
+    ]
+}

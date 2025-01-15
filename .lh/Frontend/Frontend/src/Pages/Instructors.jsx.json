@@ -1,0 +1,42 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Pages/Instructors.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1735737160740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735737247128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n import React from 'react'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n \r\n export const Instructors = () => {\r\n   return (\r\n-    <div>Instructors</div>\r\n+    <div>\r\n+      <TopNav />\r\n+      <BottomNav />\r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735738401655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { Header } from '../Components/OurInstructors/Header'\r\n \r\n export const Instructors = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n+      <Header />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735738679535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/OurInstructors/Header'\r\n+import TutorList from '../Components/OurInstructors/TotorCard'\r\n \r\n export const Instructors = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n+      <TutorList />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735799151171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,16 @@\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/OurInstructors/Header'\r\n import TutorList from '../Components/OurInstructors/TotorCard'\r\n+import { Tutor } from '../Components/Tutot/Tutor'\r\n \r\n export const Instructors = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n-      <TutorList />\r\n+    <Tutor />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735799178136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,19 @@\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/OurInstructors/Header'\r\n import TutorList from '../Components/OurInstructors/TotorCard'\r\n import { Tutor } from '../Components/Tutot/Tutor'\r\n+import { ICONS } from '../Components/Icons/Icons'\r\n+import Footer from '../Components/Footer/Footer'\r\n \r\n export const Instructors = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n     <Tutor />\r\n+    <ICONS />\r\n+    <Footer />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736070079520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import React from 'react'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { Header } from '../Components/OurInstructors/Header'\r\n+\r\n+import { Tutor } from '../Components/Tutot/Tutor'\r\n+import { ICONS } from '../Components/Icons/Icons'\r\n+import Footer from '../Components/Footer/Footer'\r\n+\r\n+export const Instructors = () => {\r\n+  return (\r\n+    <div>\r\n+      <TopNav />\r\n+      <BottomNav />\r\n+      <Header />\r\n+    <Tutor />\r\n+    <ICONS />\r\n+    <Footer />\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                }
+            ],
+            "date": 1735737160740,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const Instructors = () => {\r\n  return (\r\n    <div>Instructors</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

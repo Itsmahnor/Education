@@ -1,0 +1,50 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Pages/WhyChooseUs.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1735735002942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735735189423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n import React from 'react'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n \r\n export const WhyChooseUs = () => {\r\n   return (\r\n-    <div>WhyChooseUs</div>\r\n+    <>\r\n+    <TopNav />\r\n+    <BottomNav />\r\n+    </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735735462249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { Header } from '../Components/ChooseUS/Header'\r\n \r\n export const WhyChooseUs = () => {\r\n   return (\r\n     <>\r\n     <TopNav />\r\n     <BottomNav />\r\n+    <Header />\r\n     </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735735871602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,17 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/ChooseUS/Header'\r\n+import WhyChoose from '../Components/ChooseUS/Content'\r\n \r\n export const WhyChooseUs = () => {\r\n   return (\r\n     <>\r\n     <TopNav />\r\n     <BottomNav />\r\n     <Header />\r\n+  <WhyChoose />\r\n+\r\n     </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735736238138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,17 @@\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/ChooseUS/Header'\r\n import WhyChoose from '../Components/ChooseUS/Content'\r\n+import { ICONS } from '../Components/ChooseUS/Icons'\r\n \r\n export const WhyChooseUs = () => {\r\n   return (\r\n     <>\r\n     <TopNav />\r\n     <BottomNav />\r\n     <Header />\r\n   <WhyChoose />\r\n-\r\n+<ICONS />\r\n     </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735736624238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/ChooseUS/Header'\r\n import WhyChoose from '../Components/ChooseUS/Content'\r\n import { ICONS } from '../Components/ChooseUS/Icons'\r\n+import Opportunities from '../Components/ChooseUS/slider'\r\n \r\n export const WhyChooseUs = () => {\r\n   return (\r\n     <>\r\n@@ -12,7 +13,8 @@\n     <BottomNav />\r\n     <Header />\r\n   <WhyChoose />\r\n <ICONS />\r\n+<Opportunities />\r\n     </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735736666455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     <TopNav />\r\n     <BottomNav />\r\n     <Header />\r\n   <WhyChoose />\r\n-<ICONS />\r\n+\r\n <Opportunities />\r\n     </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735737032174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import { Header } from '../Components/ChooseUS/Header'\r\n import WhyChoose from '../Components/ChooseUS/Content'\r\n import { ICONS } from '../Components/ChooseUS/Icons'\r\n import Opportunities from '../Components/ChooseUS/slider'\r\n+import Footer from '../Components/Footer/Footer'\r\n \r\n export const WhyChooseUs = () => {\r\n   return (\r\n     <>\r\n@@ -14,7 +15,8 @@\n     <Header />\r\n   <WhyChoose />\r\n \r\n <Opportunities />\r\n+<Footer />\r\n     </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736069238816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,12 @@\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/ChooseUS/Header'\r\n import WhyChoose from '../Components/ChooseUS/Content'\r\n-import { ICONS } from '../Components/ChooseUS/Icons'\r\n+\r\n import Opportunities from '../Components/ChooseUS/slider'\r\n import Footer from '../Components/Footer/Footer'\r\n+import { ICONS } from '../Components/Icons/Icons'\r\n \r\n export const WhyChooseUs = () => {\r\n   return (\r\n     <>\r\n@@ -15,8 +16,9 @@\n     <Header />\r\n   <WhyChoose />\r\n \r\n <Opportunities />\r\n+<ICONS />\r\n <Footer />\r\n     </>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1735735002942,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const WhyChooseUs = () => {\r\n  return (\r\n    <div>WhyChooseUs</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

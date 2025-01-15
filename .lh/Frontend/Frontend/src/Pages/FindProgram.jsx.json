@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Pages/FindProgram.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1735120569299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735120705627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n import React from 'react'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n \r\n export const FindProgram = () => {\r\n   return (\r\n-    <div>FindProgram</div>\r\n+  <>\r\n+  <TopNav />\r\n+  <BottomNav />\r\n+  </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735120911376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { Header } from '../ProgramFindPage/Header'\r\n \r\n export const FindProgram = () => {\r\n   return (\r\n   <>\r\n   <TopNav />\r\n   <BottomNav />\r\n+  <Header />\r\n   </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735121174712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n-import { Header } from '../ProgramFindPage/Header'\r\n \r\n export const FindProgram = () => {\r\n   return (\r\n   <>\r\n"
+                },
+                {
+                    "date": 1735121227466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { SearchProgram } from '../ProgramFindPage/SearchProgram/SearchProgram'\r\n \r\n export const FindProgram = () => {\r\n   return (\r\n   <>\r\n   <TopNav />\r\n   <BottomNav />\r\n   <Header />\r\n+  <SearchProgram  />\r\n   </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735121424996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { SearchProgram } from '../ProgramFindPage/SearchProgram/SearchProgram'\r\n+import { Header } from '../ProgramFindPage/Header'\r\n \r\n export const FindProgram = () => {\r\n   return (\r\n   <>\r\n   <TopNav />\r\n   <BottomNav />\r\n-  <Header />\r\n+<Header />\r\n   <SearchProgram  />\r\n   </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735124564392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,17 @@\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { SearchProgram } from '../ProgramFindPage/SearchProgram/SearchProgram'\r\n import { Header } from '../ProgramFindPage/Header'\r\n+import Footer from '../Components/Footer/Footer'\r\n \r\n export const FindProgram = () => {\r\n   return (\r\n   <>\r\n   <TopNav />\r\n   <BottomNav />\r\n <Header />\r\n   <SearchProgram  />\r\n+  <Footer />\r\n   </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736002663752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,18 @@\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { SearchProgram } from '../ProgramFindPage/SearchProgram/SearchProgram'\r\n import { Header } from '../ProgramFindPage/Header'\r\n import Footer from '../Components/Footer/Footer'\r\n+import { ICONS } from '../Components/Icons/Icons'\r\n \r\n export const FindProgram = () => {\r\n   return (\r\n   <>\r\n   <TopNav />\r\n   <BottomNav />\r\n <Header />\r\n   <SearchProgram  />\r\n+  <ICONS />\r\n   <Footer />\r\n   </>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1735120569299,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const FindProgram = () => {\r\n  return (\r\n    <div>FindProgram</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

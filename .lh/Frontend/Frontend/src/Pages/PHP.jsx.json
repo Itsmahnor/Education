@@ -1,0 +1,42 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Pages/PHP.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1735140004081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735140098469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n import React from 'react'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n \r\n export const PHP = () => {\r\n   return (\r\n-    <div>PHP</div>\r\n+    <div>\r\n+      <TopNav />\r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735140223123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n \r\n export const PHP = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n+      <BottomNav />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735140239347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { Header } from '../Components/CoursesPage/PHPPAGE/Header'\r\n \r\n export const PHP = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n+      <Header />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735140538776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/CoursesPage/PHPPAGE/Header'\r\n+import { MainContent } from '../Components/CoursesPage/PHPPAGE/MainContent'\r\n \r\n export const PHP = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n+      <MainContent />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735207504083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import React from 'react'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { Header } from '../Components/CoursesPage/PHPPAGE/Header'\r\n+import { MainContent } from '../Components/CoursesPage/PHPPAGE/MainContent'\r\n+import Footer from '../Components/Footer/Footer'\r\n+\r\n+export const PHP = () => {\r\n+  return (\r\n+    <div>\r\n+      <TopNav />\r\n+      <BottomNav />\r\n+      <Header />\r\n+      <MainContent />\r\n+      <Footer />\r\n+    </div>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1735213506162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,32 +3,18 @@\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/CoursesPage/PHPPAGE/Header'\r\n import { MainContent } from '../Components/CoursesPage/PHPPAGE/MainContent'\r\n import Footer from '../Components/Footer/Footer'\r\n+import CareerOpportunities from '../Components/CareerOpertunities'\r\n \r\n export const PHP = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n       <MainContent />\r\n+      <CareerOpportunities />\r\n       <Footer />\r\n     </div>\r\n   )\r\n }\r\n-import React from 'react'\r\n-import { TopNav } from '../Components/Navbar/TopNav'\r\n-import { BottomNav } from '../Components/Navbar/BottomNav'\r\n-import { Header } from '../Components/CoursesPage/PHPPAGE/Header'\r\n-import { MainContent } from '../Components/CoursesPage/PHPPAGE/MainContent'\r\n-\r\n-export const PHP = () => {\r\n-  return (\r\n-    <div>\r\n-      <TopNav />\r\n-      <BottomNav />\r\n-      <Header />\r\n-      <MainContent />\r\n-    </div>\r\n-  )\r\n-}\r\n"
+                }
+            ],
+            "date": 1735140004081,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const PHP = () => {\r\n  return (\r\n    <div>PHP</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

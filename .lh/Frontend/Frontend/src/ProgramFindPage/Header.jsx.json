@@ -1,0 +1,38 @@
+{
+    "sourceFile": "Frontend/Frontend/src/ProgramFindPage/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1735120876017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735120950206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper h-[50vh] flex justify-center items-center flex-col \">\r\n- <h1 className='text-orange-950 font-bold'>Course Enrollment</h1>\r\n- <p className='w-[70vw]'>At <span className='bg-orange-950 text-orange-500 p-1'>SkillsEducation</span>, enrolling in a course is your first step toward building a brighter future. Our streamlined enrollment process ensures you can quickly join the course of your choice and begin your learning journey. Explore our offerings and find the perfect course to match your ambitions and goals.</p>\r\n+ <h1 className='text-orange-950 font-bold'>Explore Our Courses</h1>\r\n+ <p className='w-[70vw]'>At <span className='bg-orange-950 text-orange-500 p-1'>SkillsEducation</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n   </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736002173359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper h-[50vh] flex justify-center items-center flex-col \">\r\n- <h1 className='text-orange-950 font-bold'>Explore Our Courses</h1>\r\n- <p className='w-[70vw]'>At <span className='bg-orange-950 text-orange-500 p-1'>SkillsEducation</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n+ <h1 className='text-white font-bold'>Explore Our Courses</h1>\r\n+ <p className='w-[70vw]'>At <span className='bg-[#04211e] text-orange-500 p-1'>SkillsEducation</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n   </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736002179617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper h-[50vh] flex justify-center items-center flex-col \">\r\n  <h1 className='text-white font-bold'>Explore Our Courses</h1>\r\n- <p className='w-[70vw]'>At <span className='bg-[#04211e] text-orange-500 p-1'>SkillsEducation</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n+ <p className='w-[70vw]'>At <span className='bg-[#04211e] text-white p-1'>SkillsEducation</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n   </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736003306402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const Header = () => {\r\n   return (\r\n     <div class=\"breadcrumb-wrapper h-[50vh] flex justify-center items-center flex-col \">\r\n  <h1 className='text-white font-bold'>Explore Our Courses</h1>\r\n- <p className='w-[70vw]'>At <span className='bg-[#04211e] text-white p-1'>SkillsEducation</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n+ <p className='w-[70vw] text-white'>At <span className='bg-[#04211e] text-white p-1'>SkillsEducation</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n   </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736072017396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import React from 'react'\r\n+\r\n+export const Header = () => {\r\n+  return (\r\n+    <div class=\"breadcrumb-wrapper h-[50vh] flex justify-center items-center flex-col \">\r\n+ <h1 className='text-white font-bold'>Explore Our Courses</h1>\r\n+ <p className='w-[70vw] text-white'>At <span className='bg-[#04211e] text-white p-1'>ProLernoX</span>, we offer a diverse range of courses designed to help you advance your career and develop new skills. Whether you're looking to start a new career in web development, digital marketing, or data science, or you're looking to enhance your existing skills, we have a course for you!</p>\r\n+  </div>\r\n+  )\r\n+}\r\n"
+                }
+            ],
+            "date": 1735120876017,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const Header = () => {\r\n  return (\r\n    <div class=\"breadcrumb-wrapper h-[50vh] flex justify-center items-center flex-col \">\r\n <h1 className='text-orange-950 font-bold'>Course Enrollment</h1>\r\n <p className='w-[70vw]'>At <span className='bg-orange-950 text-orange-500 p-1'>SkillsEducation</span>, enrolling in a course is your first step toward building a brighter future. Our streamlined enrollment process ensures you can quickly join the course of your choice and begin your learning journey. Explore our offerings and find the perfect course to match your ambitions and goals.</p>\r\n  </div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

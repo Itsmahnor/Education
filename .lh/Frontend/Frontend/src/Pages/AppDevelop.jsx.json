@@ -1,0 +1,42 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Pages/AppDevelop.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1735213889546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735213930421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,13 @@\n import React from 'react'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n \r\n export const AppDevelop = () => {\r\n   return (\r\n-    <div>Develop</div>\r\n+    <div>\r\n+      <TopNav />\r\n+      <BottomNav />\r\n+      \r\n+    </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735214198818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import { Header } from '../Components/CoursesPage/AppDEvelopment/Header'\r\n \r\n export const AppDevelop = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n-      \r\n+      <Header />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735214644098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/CoursesPage/AppDEvelopment/Header'\r\n+import { MainContent } from '../Components/CoursesPage/FULLSTACK/MainContent'\r\n \r\n export const AppDevelop = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n+      <MainContent />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735214681413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,17 @@\n import React from 'react'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/CoursesPage/AppDEvelopment/Header'\r\n-import { MainContent } from '../Components/CoursesPage/FULLSTACK/MainContent'\r\n+import { MainContent } from '../Components/CoursesPage/AppDEvelopment/MainContent'\r\n \r\n+\r\n export const AppDevelop = () => {\r\n   return (\r\n     <div>\r\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n-      <MainContent />\r\n+  <MainContent />\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735215270984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/CoursesPage/AppDEvelopment/Header'\r\n import { MainContent } from '../Components/CoursesPage/AppDEvelopment/MainContent'\r\n+import CareerOpportunities from '../Components/CareerOpertunities'\r\n \r\n \r\n export const AppDevelop = () => {\r\n   return (\r\n@@ -11,7 +12,9 @@\n       <TopNav />\r\n       <BottomNav />\r\n       <Header />\r\n   <MainContent />\r\n+  <CareerOpportunities />\r\n+  \r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735215280516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import { Header } from '../Components/CoursesPage/AppDEvelopment/Header'\r\n import { MainContent } from '../Components/CoursesPage/AppDEvelopment/MainContent'\r\n import CareerOpportunities from '../Components/CareerOpertunities'\r\n+import Footer from '../Components/Footer/Footer'\r\n \r\n \r\n export const AppDevelop = () => {\r\n   return (\r\n@@ -13,8 +14,8 @@\n       <BottomNav />\r\n       <Header />\r\n   <MainContent />\r\n   <CareerOpportunities />\r\n-  \r\n+  <Footer />\r\n     </div>\r\n   )\r\n }\r\n"
+                }
+            ],
+            "date": 1735213889546,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const AppDevelop = () => {\r\n  return (\r\n    <div>Develop</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Components/CoursesPage/AppDEvelopment/Content.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1735214779312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1735214779312,
+            "name": "Commit-0",
+            "content": "{\r\n  \"outline\": [\r\n    {\r\n      \"month\": \"Month 1\",\r\n      \"title\": \"Introduction to Flutter and Dart\",\r\n      \"topics\": [\r\n        {\r\n          \"heading\": \"Getting Started with Flutter and Dart\",\r\n          \"description\": \"Understand the basics of Flutter, set up the development environment, and learn Dart programming fundamentals.\"\r\n        },\r\n        {\r\n          \"heading\": \"Building Simple UIs with Flutter Widgets\",\r\n          \"description\": \"Learn to create user interfaces using Flutter's widget library, focusing on layouts, styles, and interactive elements.\"\r\n        },\r\n        {\r\n          \"heading\": \"Managing App State in Flutter\",\r\n          \"description\": \"Discover state management techniques such as Stateful Widgets and Provider to manage app state effectively.\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"month\": \"Month 2\",\r\n      \"title\": \"Intermediate Flutter Concepts and Backend Integration\",\r\n      \"topics\": [\r\n        {\r\n          \"heading\": \"Understanding Flutter Navigation\",\r\n          \"description\": \"Learn how to navigate between screens using Flutter's navigation system and manage routes efficiently.\"\r\n        },\r\n        {\r\n          \"heading\": \"Working with REST APIs\",\r\n          \"description\": \"Integrate backend services by consuming REST APIs, handling HTTP requests, and parsing JSON data.\"\r\n        },\r\n        {\r\n          \"heading\": \"Implementing Authentication\",\r\n          \"description\": \"Set up user authentication using Firebase or other third-party tools to secure your Flutter applications.\"\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"month\": \"Month 3\",\r\n      \"title\": \"Advanced Flutter Concepts and Deployment\",\r\n      \"topics\": [\r\n        {\r\n          \"heading\": \"Optimizing App Performance\",\r\n          \"description\": \"Learn techniques to optimize your app's performance by reducing build times and improving UI responsiveness.\"\r\n        },\r\n        {\r\n          \"heading\": \"Publishing Apps to Play Store and App Store\",\r\n          \"description\": \"Understand the process of signing, building, and publishing your Flutter apps to Google Play and Apple App Store.\"\r\n        },\r\n        {\r\n          \"heading\": \"Building for Web and Desktop\",\r\n          \"description\": \"Explore Flutter’s capability to build web and desktop applications alongside mobile apps.\"\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\r\n    \"question\": \"When would you like to start?\",\r\n    \"description\": \"Start straight away and join a community of learners from across Pakistan. If the course hasn’t started yet, you’ll see the future date listed below.\"\r\n  }\r\n}\r\n"
+        }
+    ]
+}

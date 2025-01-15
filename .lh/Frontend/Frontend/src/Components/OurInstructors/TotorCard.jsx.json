@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Components/OurInstructors/TotorCard.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1735738624383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1735738624383,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\n\r\nconst TutorCard = ({\r\n  name,\r\n  title,\r\n  batchesCompleted,\r\n  projects,\r\n  experience,\r\n  image,\r\n}) => {\r\n  return (\r\n    <div className=\"bg-brown-500 rounded-md p-4 m-4 shadow-lg\">\r\n      <img\r\n        src={image}\r\n        alt={name}\r\n        className=\"w-24 h-24 rounded-full mx-auto\"\r\n      />\r\n      <h2 className=\"text-xl font-bold text-yellow-500 mt-4 text-center\">\r\n        {name}\r\n      </h2>\r\n      <p className=\"text-sm text-yellow-500 text-center mt-2\">{title}</p>\r\n      <div className=\"text-center mt-4\">\r\n        <p className=\"text-sm text-yellow-500\">\r\n          {batchesCompleted} Batches Completed\r\n        </p>\r\n        <p className=\"text-sm text-yellow-500 mt-2\">\r\n          {projects}+ /Projects\r\n        </p>\r\n        <p className=\"text-sm text-yellow-500\">{experience} years experience</p>\r\n        <div className=\"flex justify-center items-center mt-2\">\r\n          <span className=\"material-icons\">star</span>\r\n          <span className=\"material-icons\">star</span>\r\n          <span className=\"material-icons\">star</span>\r\n          <span className=\"material-icons\">star</span>\r\n          <span className=\"material-icons\">star</span>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nconst TutorList = () => {\r\n  const tutors = [\r\n    {\r\n      name: \"Umair Farooqi\",\r\n      title: \"WEB, APPS AND AI TUTOR\",\r\n      batchesCompleted: \"70+\",\r\n      projects: \"300+\",\r\n      experience: \"7+\",\r\n      image: \"https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwa - XNzY3fDB8fHx8fHwxNjYyMjY0NzY0&auto=format&fit=crop&w=500&q=60\",\r\n    },\r\n    {\r\n      name: \"Sara Khan\",\r\n      title: \"DATA SCIENCE TUTOR\",\r\n      batchesCompleted: \"50+\",\r\n      projects: \"150+\",\r\n      experience: \"5+\",\r\n      image: \"https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaXNzY3Y3fDB8fHx8fHwxNjYyMjY0NzY0&auto=format&fit=crop&w=500&q=60\",\r\n    },\r\n  ];\r\n\r\n  return (\r\n    <div className=\"flex flex-wrap justify-center\">\r\n      {tutors.map((tutor, index) => (\r\n        <TutorCard key={index} {...tutor} />\r\n      ))}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default TutorList;"
+        }
+    ]
+}

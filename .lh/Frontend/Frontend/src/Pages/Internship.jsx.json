@@ -1,0 +1,42 @@
+{
+    "sourceFile": "Frontend/Frontend/src/Pages/Internship.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1735643574558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735643760147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react'\r\n+import { Header } from '../Components/InternShip/Header'\r\n \r\n export const Internship = () => {\r\n   return (\r\n-    <div>Internship</div>\r\n+  <Header />\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735643998700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,15 @@\n import React from 'react'\r\n import { Header } from '../Components/InternShip/Header'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n \r\n export const Internship = () => {\r\n   return (\r\n+    <>\r\n+     <TopNav />\r\n+    <BottomNav/>\r\n   <Header />\r\n+    </>\r\n+   \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735644201672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,42 @@\n     <>\r\n      <TopNav />\r\n     <BottomNav/>\r\n   <Header />\r\n+  <div className=\"bg-orange-900 text-orange-400 px-8 py-10\">\r\n+        <h2 className=\"text-2xl font-bold uppercase mb-4\">Certificate</h2>\r\n+        <h3 className=\"text-3xl font-bold mb-6\">Internship Certification Program</h3>\r\n+        <ul className=\"text-lg space-y-3\">\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> Web Development\r\n+          </li>\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> Marketing\r\n+          </li>\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> App Development\r\n+          </li>\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> Graphic Designing\r\n+          </li>\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> Freelancing\r\n+          </li>\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> AI\r\n+          </li>\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> Game Development\r\n+          </li>\r\n+          <li className=\"flex items-center\">\r\n+            <span className=\"text-green-400 mr-2\">✔</span> Programming\r\n+          </li>\r\n+        </ul>\r\n+        <p className=\"text-orange-500 mt-6 font-bold\">\r\n+          Guaranteed Certification on Completion\r\n+        </p>\r\n+      </div>\r\n+   \r\n     </>\r\n    \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735644269993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,49 +1,17 @@\n import React from 'react'\r\n import { Header } from '../Components/InternShip/Header'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import InternshipCertificationProgram from '../Components/InternShip/content'\r\n \r\n export const Internship = () => {\r\n   return (\r\n     <>\r\n      <TopNav />\r\n     <BottomNav/>\r\n   <Header />\r\n-  <div className=\"bg-orange-900 text-orange-400 px-8 py-10\">\r\n-        <h2 className=\"text-2xl font-bold uppercase mb-4\">Certificate</h2>\r\n-        <h3 className=\"text-3xl font-bold mb-6\">Internship Certification Program</h3>\r\n-        <ul className=\"text-lg space-y-3\">\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> Web Development\r\n-          </li>\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> Marketing\r\n-          </li>\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> App Development\r\n-          </li>\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> Graphic Designing\r\n-          </li>\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> Freelancing\r\n-          </li>\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> AI\r\n-          </li>\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> Game Development\r\n-          </li>\r\n-          <li className=\"flex items-center\">\r\n-            <span className=\"text-green-400 mr-2\">✔</span> Programming\r\n-          </li>\r\n-        </ul>\r\n-        <p className=\"text-orange-500 mt-6 font-bold\">\r\n-          Guaranteed Certification on Completion\r\n-        </p>\r\n-      </div>\r\n-   \r\n+  <InternshipCertificationProgram />\r\n     </>\r\n    \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1735654398387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,18 @@\n import { Header } from '../Components/InternShip/Header'\r\n import { TopNav } from '../Components/Navbar/TopNav'\r\n import { BottomNav } from '../Components/Navbar/BottomNav'\r\n import InternshipCertificationProgram from '../Components/InternShip/content'\r\n+import Footer from '../Components/Footer/Footer'\r\n \r\n export const Internship = () => {\r\n   return (\r\n     <>\r\n      <TopNav />\r\n     <BottomNav/>\r\n   <Header />\r\n   <InternshipCertificationProgram />\r\n+  <Footer />\r\n     </>\r\n    \r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1736003725613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import React from 'react'\r\n+import { Header } from '../Components/InternShip/Header'\r\n+import { TopNav } from '../Components/Navbar/TopNav'\r\n+import { BottomNav } from '../Components/Navbar/BottomNav'\r\n+import InternshipCertificationProgram from '../Components/InternShip/content'\r\n+import Footer from '../Components/Footer/Footer'\r\n+import { ICONS } from '../Components/Icons/Icons'\r\n+\r\n+export const Internship = () => {\r\n+  return (\r\n+    <>\r\n+     <TopNav />\r\n+    <BottomNav/>\r\n+  <Header />\r\n+  <InternshipCertificationProgram />\r\n+  <ICONS />\r\n+  <Footer />\r\n+    </>\r\n+   \r\n+  )\r\n+}\r\n"
+                }
+            ],
+            "date": 1735643574558,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const Internship = () => {\r\n  return (\r\n    <div>Internship</div>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

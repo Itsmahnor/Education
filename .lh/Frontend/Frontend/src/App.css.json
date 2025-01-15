@@ -1,0 +1,398 @@
+{
+    "sourceFile": "Frontend/Frontend/src/App.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 95,
+            "patches": [
+                {
+                    "date": 1735102717430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1735102730008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n     }\n \n     /* icons section */\n     .slider-item {\n-      padding: 0 10px; /* Adjust gap between slides */\n+      padding: 0 20px; /* Adjust gap between slides */\n     }\n     \n     .slider-image {\n       width: 100%; /* Ensures the images fit within the container */\n"
+                },
+                {
+                    "date": 1735103263260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,24 +49,36 @@\n   display: none;\n }\n    \n     } \n-\n-    /* mobile view styling */\n+/* mobile view styling */\n     .offcanvas {\n       background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n       color: white;\n     }\n     .cross {\n       color: white !important;\n     }\n-\n-    /* icons section */\n+/* icons section */\n     .slider-item {\n       padding: 0 20px; /* Adjust gap between slides */\n     }\n     \n     .slider-image {\n       width: 100%; /* Ensures the images fit within the container */\n       object-fit: contain; /* Prevents stretching of images */\n\\ No newline at end of file\n     }\n-    \n+    .animate{\n+      animation: appear linear;\n+      animation-timeline: view();\n+      animation-range: entry 0 cover 40%;\n+    }\n+    @keyframes appear {\n+      from{\n+        opacity: 0;\n+        scale: 0.5;\n+      }\n+      to {\n+        opacity: 1;\n+        scale: 1;\n+      }\n+    }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735103407897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,8 +66,10 @@\n     .slider-image {\n       width: 100%; /* Ensures the images fit within the container */\n       object-fit: contain; /* Prevents stretching of images */\n     }\n+\n+    /* animation */\n     .animate{\n       animation: appear linear;\n       animation-timeline: view();\n       animation-range: entry 0 cover 40%;\n"
+                },
+                {
+                    "date": 1735104676743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n }\n body{\n   overflow-x: hidden;\n }\n+a{\n+  text-decoration: none;\n+}\n /* top nav Responsiveness */\n @media(max-width:720px){\n   .hideRes {\n     display: none;\n"
+                },
+                {
+                    "date": 1735104699442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n }\n body{\n   overflow-x: hidden;\n }\n-a{\n+li{\n   text-decoration: none;\n }\n /* top nav Responsiveness */\n @media(max-width:720px){\n"
+                },
+                {
+                    "date": 1735113250561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n }\n body{\n   overflow-x: hidden;\n }\n-li{\n+li a{\n   text-decoration: none;\n+  color: green;\n }\n /* top nav Responsiveness */\n @media(max-width:720px){\n   .hideRes {\n"
+                },
+                {
+                    "date": 1735113279599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,14 @@\n }\n body{\n   overflow-x: hidden;\n }\n+a{\n+  text-decoration: none;\n+}\n li a{\n   text-decoration: none;\n-  color: green;\n+ \n }\n /* top nav Responsiveness */\n @media(max-width:720px){\n   .hideRes {\n"
+                },
+                {
+                    "date": 1735113292669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n body{\n   overflow-x: hidden;\n }\n a{\n-  text-decoration: none;\n+  text-decoration: none !important;\n }\n li a{\n   text-decoration: none;\n  \n"
+                },
+                {
+                    "date": 1735113307758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n   overflow-x: hidden;\n }\n a{\n   text-decoration: none !important;\n+  color: black !important;\n }\n li a{\n   text-decoration: none;\n  \n"
+                },
+                {
+                    "date": 1735113521618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,5 +90,41 @@\n       to {\n         opacity: 1;\n         scale: 1;\n       }\n-    }\n\\ No newline at end of file\n+    }\n+    .breadcrumb-wrapper {\n+      position: relative; /* Needed for the pseudo-element to position properly */\n+      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n+      background-color: #f5f5f5; /* Placeholder background (light gray) */\n+      color: #333; /* Text color for content */\n+      padding: 20px; /* Adds some spacing */\n+      border-radius: 8px; /* Optional: rounded corners */\n+    }\n+    \n+    .breadcrumb-wrapper::before {\n+      content: '';\n+      position: absolute;\n+      top: 0;\n+      left: -100%; /* Starts completely off-screen to the left */\n+      width: 100%;\n+      height: 100%;\n+      background-image: linear-gradient(\n+        to right,\n+        rgba(255, 255, 255, 0.3) 10%, \n+        rgba(255, 255, 255, 0) 50%, \n+        rgba(255, 255, 255, 0.3) 90%\n+      );\n+      background-size: 200% 100%; /* Double the width to allow for smooth sliding */\n+      animation: slide 3s linear infinite; /* Applies the shimmering animation */\n+    }\n+    \n+    /* Keyframes for the sliding effect */\n+    @keyframes slide {\n+      from {\n+        left: -100%; /* Start off-screen on the left */\n+      }\n+      to {\n+        left: 100%; /* Move off-screen to the right */\n+      }\n+    }\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735113545447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -94,9 +94,9 @@\n     }\n     .breadcrumb-wrapper {\n       position: relative; /* Needed for the pseudo-element to position properly */\n       overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n-      background-color: #f5f5f5; /* Placeholder background (light gray) */\n+      background-color: orange; /* Placeholder background (light gray) */\n       color: #333; /* Text color for content */\n       padding: 20px; /* Adds some spacing */\n       border-radius: 8px; /* Optional: rounded corners */\n     }\n"
+                },
+                {
+                    "date": 1735113559405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n       position: relative; /* Needed for the pseudo-element to position properly */\n       overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n       background-color: orange; /* Placeholder background (light gray) */\n       color: #333; /* Text color for content */\n-      padding: 20px; /* Adds some spacing */\n+     \n       border-radius: 8px; /* Optional: rounded corners */\n     }\n     \n     .breadcrumb-wrapper::before {\n"
+                },
+                {
+                    "date": 1735113574921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,10 +96,10 @@\n       position: relative; /* Needed for the pseudo-element to position properly */\n       overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n       background-color: orange; /* Placeholder background (light gray) */\n       color: #333; /* Text color for content */\n+      padding: 20px; /* Adds some spacing */\n      \n-      border-radius: 8px; /* Optional: rounded corners */\n     }\n     \n     .breadcrumb-wrapper::before {\n       content: '';\n"
+                },
+                {
+                    "date": 1735113602197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,8 +91,10 @@\n         opacity: 1;\n         scale: 1;\n       }\n     }\n+\n+    /* styling for register slider */\n     .breadcrumb-wrapper {\n       position: relative; /* Needed for the pseudo-element to position properly */\n       overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n       background-color: orange; /* Placeholder background (light gray) */\n"
+                },
+                {
+                    "date": 1735114242149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     .breadcrumb-wrapper {\n       position: relative; /* Needed for the pseudo-element to position properly */\n       overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n       background-color: orange; /* Placeholder background (light gray) */\n-      color: #333; /* Text color for content */\n+    \n       padding: 20px; /* Adds some spacing */\n      \n     }\n     \n"
+                },
+                {
+                    "date": 1735115141330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   overflow-x: hidden;\n }\n a{\n   text-decoration: none !important;\n-  color: black !important;\n+  color: orange !important;\n }\n li a{\n   text-decoration: none;\n  \n"
+                },
+                {
+                    "date": 1735115165597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   overflow-x: hidden;\n }\n a{\n   text-decoration: none !important;\n-  color: orange !important;\n+ \n }\n li a{\n   text-decoration: none;\n  \n"
+                },
+                {
+                    "date": 1735115189694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n }\n body{\n   overflow-x: hidden;\n }\n+.register{\n+  color: black;\n+}\n a{\n   text-decoration: none !important;\n  \n }\n"
+                },
+                {
+                    "date": 1735115223790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n body{\n   overflow-x: hidden;\n }\n .register{\n-  color: black;\n+  color: black !important;\n }\n a{\n   text-decoration: none !important;\n  \n"
+                },
+                {
+                    "date": 1735115236753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n }\n body{\n   overflow-x: hidden;\n }\n-.register{\n+.register1{\n   color: black !important;\n }\n a{\n   text-decoration: none !important;\n"
+                },
+                {
+                    "date": 1735115520934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,14 @@\n }\n .register1{\n   color: black !important;\n }\n-a{\n-  text-decoration: none !important;\n- \n+a {\n+  color: inherit; /* Inherit text color from the parent */\n+  text-decoration: none; /* Remove underline */\n }\n+\n+\n li a{\n   text-decoration: none;\n  \n }\n"
+                },
+                {
+                    "date": 1735115535646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,8 @@\n }\n .register1{\n   color: black !important;\n }\n-a {\n-  color: inherit; /* Inherit text color from the parent */\n-  text-decoration: none; /* Remove underline */\n-}\n \n \n li a{\n   text-decoration: none;\n"
+                },
+                {
+                    "date": 1735115583368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n }\n \n \n li a{\n-  text-decoration: none;\n+  text-decoration: none !important;\n  \n }\n /* top nav Responsiveness */\n @media(max-width:720px){\n"
+                },
+                {
+                    "date": 1735115594376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   color: black !important;\n }\n \n \n-li a{\n+ a{\n   text-decoration: none !important;\n  \n }\n /* top nav Responsiveness */\n"
+                },
+                {
+                    "date": 1735128175585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,14 @@\n .register1{\n   color: black !important;\n }\n \n-\n+@media(max-width:1618px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: 1fr 1fr;\n+  }\n+}\n  a{\n   text-decoration: none !important;\n  \n }\n"
+                },
+                {
+                    "date": 1735128200491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n @media(max-width:1618px){\n   .search {\n     display: grid;\n-    grid-template-columns: 1fr 1fr;\n+    grid-template-columns: repeat(2,1fr);\n   }\n }\n  a{\n   text-decoration: none !important;\n"
+                },
+                {
+                    "date": 1735128226161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,14 @@\n     display: grid;\n     grid-template-columns: repeat(2,1fr);\n   }\n }\n+@media(max-width:784px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: repeat(1,1fr);\n+  }\n+}\n  a{\n   text-decoration: none !important;\n  \n }\n"
+                },
+                {
+                    "date": 1735128239446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n @media(max-width:784px){\n   .search {\n     display: grid;\n     grid-template-columns: repeat(1,1fr);\n+    justify-content: center;\n   }\n }\n  a{\n   text-decoration: none !important;\n"
+                },
+                {
+                    "date": 1735129539895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,13 +14,13 @@\n     display: grid;\n     grid-template-columns: repeat(2,1fr);\n   }\n }\n-@media(max-width:784px){\n+@media(max-width:770px){\n   .search {\n     display: grid;\n     grid-template-columns: repeat(1,1fr);\n-    justify-content: center;\n+   \n   }\n }\n  a{\n   text-decoration: none !important;\n"
+                },
+                {
+                    "date": 1735384954234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,13 @@\n .white-background {\n background-color: white;\n }\n /* bottom nav responsiveness */\n+@media(max-width:1558px){\n+  .widthof{\n+    width: 78vw;\n+  }\n+}\n .bar{\n   display: none;\n }\n @media(max-width:1528px){\n"
+                },
+                {
+                    "date": 1735385016809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n .white-background {\n background-color: white;\n }\n /* bottom nav responsiveness */\n-@media(max-width:1558px){\n+@media(max-width:2000px){\n   .widthof{\n     width: 78vw;\n   }\n }\n"
+                },
+                {
+                    "date": 1735385100995,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n .white-background {\n background-color: white;\n }\n /* bottom nav responsiveness */\n-@media(max-width:2000px){\n+@media(min-width:2000px){\n   .widthof{\n     width: 78vw;\n   }\n }\n"
+                },
+                {
+                    "date": 1735385108933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n .white-background {\n background-color: white;\n }\n /* bottom nav responsiveness */\n-@media(min-width:2000px){\n+@media(max-width:2000px){\n   .widthof{\n     width: 78vw;\n   }\n }\n"
+                },
+                {
+                    "date": 1735385122660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n }\n /* bottom nav responsiveness */\n @media(max-width:2000px){\n   .widthof{\n-    width: 78vw;\n+    width: 73vw;\n   }\n }\n .bar{\n   display: none;\n"
+                },
+                {
+                    "date": 1735385152940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n }\n /* bottom nav responsiveness */\n @media(max-width:2000px){\n   .widthof{\n-    width: 73vw;\n+    width: 71vw;\n   }\n }\n .bar{\n   display: none;\n"
+                },
+                {
+                    "date": 1735385232153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,13 @@\n   .widthof{\n     width: 71vw;\n   }\n }\n+@media(max-width:1528px){\n+  .widthof{\n+    width: auto;\n+  }\n+}\n .bar{\n   display: none;\n }\n @media(max-width:1528px){\n"
+                },
+                {
+                    "date": 1735385367846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n .bottom {\n width: 100vw;\n }\n }\n-@media(max-width:1225px){\n+@media(max-width:1252px){\n   .hide {\n display: none;\n   }\n   .bottom {\n"
+                },
+                {
+                    "date": 1735385384176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n .bottom {\n width: 100vw;\n }\n }\n-@media(max-width:1252px){\n+@media(max-width:1304px){\n   .hide {\n display: none;\n   }\n   .bottom {\n"
+                },
+                {
+                    "date": 1735385408843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n .bottom {\n width: 100vw;\n }\n }\n-@media(max-width:1304px){\n+@media(max-width:1340px){\n   .hide {\n display: none;\n   }\n   .bottom {\n"
+                },
+                {
+                    "date": 1735643330948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,176 @@\n+*{\n+  margin: 0;\n+  padding: 0;\n+}\n+body{\n+  overflow-x: hidden;\n+}\n+.register1{\n+  color: black !important;\n+}\n+\n+@media(max-width:1618px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: repeat(2,1fr);\n+  }\n+}\n+@media(max-width:770px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: repeat(1,1fr);\n+   \n+  }\n+}\n+ a{\n+  text-decoration: none !important;\n+ \n+}\n+/* top nav Responsiveness */\n+@media(max-width:720px){\n+  .hideRes {\n+    display: none;\n+  }\n+  .topnavwidth{\n+   width: auto;\n+  }\n+}\n+.white-background {\n+background-color: white;\n+}\n+/* bottom nav responsiveness */\n+@media(max-width:2000px){\n+  .widthof{\n+    width: 71vw;\n+  }\n+}\n+@media(max-width:1528px){\n+  .widthof{\n+    width: auto;\n+  }\n+}\n+.bar{\n+  display: none;\n+}\n+@media(max-width:1528px){\n+.bottom {\n+width: 100vw;\n+}\n+}\n+@media(max-width:1340px){\n+  .hide {\n+display: none;\n+  }\n+  .bottom {\n+    width: 80vw;\n+    }\n+    .left-nav {\n+      font-size: 1rem;\n+    }\n+  \n+  }\n+\n+  @media(max-width:1046px){\n+.bar{\n+  display: flex !important;\n+  justify-content: center;\n+  align-items: center;\n+}\n+.left-nav{\n+  display: none;\n+}\n+   \n+    } \n+/* mobile view styling */\n+    .offcanvas {\n+      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n+      color: white;\n+    }\n+    .cross {\n+      color: white !important;\n+    }\n+/* icons section */\n+    .slider-item {\n+      padding: 0 20px; /* Adjust gap between slides */\n+    }\n+    \n+    .slider-image {\n+      width: 100%; /* Ensures the images fit within the container */\n+      object-fit: contain; /* Prevents stretching of images */\n+    }\n+\n+    /* animation */\n+    .animate{\n+      animation: appear linear;\n+      animation-timeline: view();\n+      animation-range: entry 0 cover 40%;\n+    }\n+    @keyframes appear {\n+      from{\n+        opacity: 0;\n+        scale: 0.5;\n+      }\n+      to {\n+        opacity: 1;\n+        scale: 1;\n+      }\n+    }\n+\n+    /* styling for register slider */\n+    .breadcrumb-wrapper {\n+      position: relative; /* Needed for the pseudo-element to position properly */\n+      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n+      background-color: orange; /* Placeholder background (light gray) */\n+    \n+      padding: 20px; /* Adds some spacing */\n+     \n+    }\n+    \n+    .breadcrumb-wrapper::before {\n+      content: '';\n+      position: absolute;\n+      top: 0;\n+      left: -100%; /* Starts completely off-screen to the left */\n+      width: 100%;\n+      height: 100%;\n+      background-image: linear-gradient(\n+        to right,\n+        rgba(255, 255, 255, 0.3) 10%, \n+        rgba(255, 255, 255, 0) 50%, \n+        rgba(255, 255, 255, 0.3) 90%\n+      );\n+      background-size: 200% 100%; /* Double the width to allow for smooth sliding */\n+      animation: slide 3s linear infinite; /* Applies the shimmering animation */\n+    }\n+    \n+    /* Keyframes for the sliding effect */\n+    @keyframes slide {\n+      from {\n+        left: -100%; /* Start off-screen on the left */\n+      }\n+      to {\n+        left: 100%; /* Move off-screen to the right */\n+      }\n+    }\n+    \n+\n+    ul.flex.flex-col.gap-2 li {\n+      position: relative;\n+      text-align: center; /* Center-align the text */\n+      color: black; /* Adjust text color */\n+    }\n+    \n+    ul.flex.flex-col.gap-2 li::after {\n+      content: \"\";\n+      position: absolute;\n+      right: 0;\n+      top: 0;\n+      bottom: 0;\n+      width: 1px;\n+      background-color: #000; /* Vertical line color */\n+    }\n+    \n+    ul.flex.flex-col.gap-2 li:last-child::after {\n+      display: none; /* Remove the line for the last item */\n+    }\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735643345687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -153,179 +153,4 @@\n       }\n     }\n     \n \n-    ul.flex.flex-col.gap-2 li {\n-      position: relative;\n-      text-align: center; /* Center-align the text */\n-      color: black; /* Adjust text color */\n-    }\n-    \n-    ul.flex.flex-col.gap-2 li::after {\n-      content: \"\";\n-      position: absolute;\n-      right: 0;\n-      top: 0;\n-      bottom: 0;\n-      width: 1px;\n-      background-color: #000; /* Vertical line color */\n-    }\n-    \n-    ul.flex.flex-col.gap-2 li:last-child::after {\n-      display: none; /* Remove the line for the last item */\n-    }\n-    \n-*{\n-  margin: 0;\n-  padding: 0;\n-}\n-body{\n-  overflow-x: hidden;\n-}\n-.register1{\n-  color: black !important;\n-}\n-\n-@media(max-width:1618px){\n-  .search {\n-    display: grid;\n-    grid-template-columns: repeat(2,1fr);\n-  }\n-}\n-@media(max-width:770px){\n-  .search {\n-    display: grid;\n-    grid-template-columns: repeat(1,1fr);\n-   \n-  }\n-}\n- a{\n-  text-decoration: none !important;\n- \n-}\n-/* top nav Responsiveness */\n-@media(max-width:720px){\n-  .hideRes {\n-    display: none;\n-  }\n-  .topnavwidth{\n-   width: auto;\n-  }\n-}\n-.white-background {\n-background-color: white;\n-}\n-/* bottom nav responsiveness */\n-@media(max-width:2000px){\n-  .widthof{\n-    width: 71vw;\n-  }\n-}\n-@media(max-width:1528px){\n-  .widthof{\n-    width: auto;\n-  }\n-}\n-.bar{\n-  display: none;\n-}\n-@media(max-width:1528px){\n-.bottom {\n-width: 100vw;\n-}\n-}\n-@media(max-width:1340px){\n-  .hide {\n-display: none;\n-  }\n-  .bottom {\n-    width: 80vw;\n-    }\n-    .left-nav {\n-      font-size: 1rem;\n-    }\n-  \n-  }\n-\n-  @media(max-width:1046px){\n-.bar{\n-  display: flex !important;\n-  justify-content: center;\n-  align-items: center;\n-}\n-.left-nav{\n-  display: none;\n-}\n-   \n-    } \n-/* mobile view styling */\n-    .offcanvas {\n-      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n-      color: white;\n-    }\n-    .cross {\n-      color: white !important;\n-    }\n-/* icons section */\n-    .slider-item {\n-      padding: 0 20px; /* Adjust gap between slides */\n-    }\n-    \n-    .slider-image {\n-      width: 100%; /* Ensures the images fit within the container */\n-      object-fit: contain; /* Prevents stretching of images */\n-    }\n-\n-    /* animation */\n-    .animate{\n-      animation: appear linear;\n-      animation-timeline: view();\n-      animation-range: entry 0 cover 40%;\n-    }\n-    @keyframes appear {\n-      from{\n-        opacity: 0;\n-        scale: 0.5;\n-      }\n-      to {\n-        opacity: 1;\n-        scale: 1;\n-      }\n-    }\n-\n-    /* styling for register slider */\n-    .breadcrumb-wrapper {\n-      position: relative; /* Needed for the pseudo-element to position properly */\n-      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n-      background-color: orange; /* Placeholder background (light gray) */\n-    \n-      padding: 20px; /* Adds some spacing */\n-     \n-    }\n-    \n-    .breadcrumb-wrapper::before {\n-      content: '';\n-      position: absolute;\n-      top: 0;\n-      left: -100%; /* Starts completely off-screen to the left */\n-      width: 100%;\n-      height: 100%;\n-      background-image: linear-gradient(\n-        to right,\n-        rgba(255, 255, 255, 0.3) 10%, \n-        rgba(255, 255, 255, 0) 50%, \n-        rgba(255, 255, 255, 0.3) 90%\n-      );\n-      background-size: 200% 100%; /* Double the width to allow for smooth sliding */\n-      animation: slide 3s linear infinite; /* Applies the shimmering animation */\n-    }\n-    \n-    /* Keyframes for the sliding effect */\n-    @keyframes slide {\n-      from {\n-        left: -100%; /* Start off-screen on the left */\n-      }\n-      to {\n-        left: 100%; /* Move off-screen to the right */\n-      }\n-    }\n-    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1735908752671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,156 @@\n+*{\n+  margin: 0;\n+  padding: 0;\n+}\n+body{\n+  overflow-x: hidden;\n+}\n+.register1{\n+  color: black !important;\n+}\n+\n+@media(max-width:1618px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: repeat(2,1fr);\n+  }\n+}\n+@media(max-width:770px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: repeat(1,1fr);\n+   \n+  }\n+}\n+ a{\n+  text-decoration: none !important;\n+ \n+}\n+/* top nav Responsiveness */\n+@media(max-width:720px){\n+  .hideRes {\n+    display: none;\n+  }\n+  .topnavwidth{\n+   width: auto;\n+  }\n+}\n+.white-background {\n+background-color: white;\n+}\n+/* bottom nav responsiveness */\n+@media(max-width:2000px){\n+  .widthof{\n+    width: 71vw;\n+  }\n+}\n+@media(max-width:1528px){\n+  .widthof{\n+    width: auto;\n+  }\n+}\n+.bar{\n+  display: none;\n+}\n+@media(max-width:1528px){\n+.bottom {\n+width: 100vw;\n+}\n+}\n+@media(max-width:1122px){\n+  .hide {\n+display: none;\n+  }\n+  .bottom {\n+    width: 80vw;\n+    }\n+    .left-nav {\n+      font-size: 1rem;\n+    }\n+  \n+  }\n+\n+  @media(max-width:1046px){\n+.bar{\n+  display: flex !important;\n+  justify-content: center;\n+  align-items: center;\n+}\n+.left-nav{\n+  display: none;\n+}\n+   \n+    } \n+/* mobile view styling */\n+    .offcanvas {\n+      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n+      color: white;\n+    }\n+    .cross {\n+      color: white !important;\n+    }\n+/* icons section */\n+    .slider-item {\n+      padding: 0 20px; /* Adjust gap between slides */\n+    }\n+    \n+    .slider-image {\n+      width: 100%; /* Ensures the images fit within the container */\n+      object-fit: contain; /* Prevents stretching of images */\n+    }\n+\n+    /* animation */\n+    .animate{\n+      animation: appear linear;\n+      animation-timeline: view();\n+      animation-range: entry 0 cover 40%;\n+    }\n+    @keyframes appear {\n+      from{\n+        opacity: 0;\n+        scale: 0.5;\n+      }\n+      to {\n+        opacity: 1;\n+        scale: 1;\n+      }\n+    }\n+\n+    /* styling for register slider */\n+    .breadcrumb-wrapper {\n+      position: relative; /* Needed for the pseudo-element to position properly */\n+      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n+      background-color: orange; /* Placeholder background (light gray) */\n+    \n+      padding: 20px; /* Adds some spacing */\n+     \n+    }\n+    \n+    .breadcrumb-wrapper::before {\n+      content: '';\n+      position: absolute;\n+      top: 0;\n+      left: -100%; /* Starts completely off-screen to the left */\n+      width: 100%;\n+      height: 100%;\n+      background-image: linear-gradient(\n+        to right,\n+        rgba(255, 255, 255, 0.3) 10%, \n+        rgba(255, 255, 255, 0) 50%, \n+        rgba(255, 255, 255, 0.3) 90%\n+      );\n+      background-size: 200% 100%; /* Double the width to allow for smooth sliding */\n+      animation: slide 3s linear infinite; /* Applies the shimmering animation */\n+    }\n+    \n+    /* Keyframes for the sliding effect */\n+    @keyframes slide {\n+      from {\n+        left: -100%; /* Start off-screen on the left */\n+      }\n+      to {\n+        left: 100%; /* Move off-screen to the right */\n+      }\n+    }\n+    \n+\n"
+                },
+                {
+                    "date": 1735908787745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1046px){\n+  @media(max-width:1076px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n@@ -153,160 +153,4 @@\n       }\n     }\n     \n \n-*{\n-  margin: 0;\n-  padding: 0;\n-}\n-body{\n-  overflow-x: hidden;\n-}\n-.register1{\n-  color: black !important;\n-}\n-\n-@media(max-width:1618px){\n-  .search {\n-    display: grid;\n-    grid-template-columns: repeat(2,1fr);\n-  }\n-}\n-@media(max-width:770px){\n-  .search {\n-    display: grid;\n-    grid-template-columns: repeat(1,1fr);\n-   \n-  }\n-}\n- a{\n-  text-decoration: none !important;\n- \n-}\n-/* top nav Responsiveness */\n-@media(max-width:720px){\n-  .hideRes {\n-    display: none;\n-  }\n-  .topnavwidth{\n-   width: auto;\n-  }\n-}\n-.white-background {\n-background-color: white;\n-}\n-/* bottom nav responsiveness */\n-@media(max-width:2000px){\n-  .widthof{\n-    width: 71vw;\n-  }\n-}\n-@media(max-width:1528px){\n-  .widthof{\n-    width: auto;\n-  }\n-}\n-.bar{\n-  display: none;\n-}\n-@media(max-width:1528px){\n-.bottom {\n-width: 100vw;\n-}\n-}\n-@media(max-width:1340px){\n-  .hide {\n-display: none;\n-  }\n-  .bottom {\n-    width: 80vw;\n-    }\n-    .left-nav {\n-      font-size: 1rem;\n-    }\n-  \n-  }\n-\n-  @media(max-width:1046px){\n-.bar{\n-  display: flex !important;\n-  justify-content: center;\n-  align-items: center;\n-}\n-.left-nav{\n-  display: none;\n-}\n-   \n-    } \n-/* mobile view styling */\n-    .offcanvas {\n-      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n-      color: white;\n-    }\n-    .cross {\n-      color: white !important;\n-    }\n-/* icons section */\n-    .slider-item {\n-      padding: 0 20px; /* Adjust gap between slides */\n-    }\n-    \n-    .slider-image {\n-      width: 100%; /* Ensures the images fit within the container */\n-      object-fit: contain; /* Prevents stretching of images */\n-    }\n-\n-    /* animation */\n-    .animate{\n-      animation: appear linear;\n-      animation-timeline: view();\n-      animation-range: entry 0 cover 40%;\n-    }\n-    @keyframes appear {\n-      from{\n-        opacity: 0;\n-        scale: 0.5;\n-      }\n-      to {\n-        opacity: 1;\n-        scale: 1;\n-      }\n-    }\n-\n-    /* styling for register slider */\n-    .breadcrumb-wrapper {\n-      position: relative; /* Needed for the pseudo-element to position properly */\n-      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n-      background-color: orange; /* Placeholder background (light gray) */\n-    \n-      padding: 20px; /* Adds some spacing */\n-     \n-    }\n-    \n-    .breadcrumb-wrapper::before {\n-      content: '';\n-      position: absolute;\n-      top: 0;\n-      left: -100%; /* Starts completely off-screen to the left */\n-      width: 100%;\n-      height: 100%;\n-      background-image: linear-gradient(\n-        to right,\n-        rgba(255, 255, 255, 0.3) 10%, \n-        rgba(255, 255, 255, 0) 50%, \n-        rgba(255, 255, 255, 0.3) 90%\n-      );\n-      background-size: 200% 100%; /* Double the width to allow for smooth sliding */\n-      animation: slide 3s linear infinite; /* Applies the shimmering animation */\n-    }\n-    \n-    /* Keyframes for the sliding effect */\n-    @keyframes slide {\n-      from {\n-        left: -100%; /* Start off-screen on the left */\n-      }\n-      to {\n-        left: 100%; /* Move off-screen to the right */\n-      }\n-    }\n-    \n-\n"
+                },
+                {
+                    "date": 1735908797176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1076px){\n+  @media(max-width:1086px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735908817222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1086px){\n+  @media(max-width:1046px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735908854021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,11 +75,11 @@\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n }\n-.left-nav{\n+/* .left-nav{\n   display: none;\n-}\n+} */\n    \n     } \n /* mobile view styling */\n     .offcanvas {\n"
+                },
+                {
+                    "date": 1735908873192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,17 +69,17 @@\n     }\n   \n   }\n \n-  @media(max-width:1046px){\n+  @media(max-width:996px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n }\n-/* .left-nav{\n+.left-nav{\n   display: none;\n-} */\n+}\n    \n     } \n /* mobile view styling */\n     .offcanvas {\n"
+                },
+                {
+                    "date": 1735908939023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:996px){\n+  @media(max-width:1046px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735908981954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1046px){\n+  @media(max-width:1195px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735909033117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   .widthof{\n     width: 71vw;\n   }\n }\n-@media(max-width:1528px){\n+@media(max-width:1195px){\n   .widthof{\n     width: auto;\n   }\n }\n"
+                },
+                {
+                    "date": 1735909059183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1195px){\n+  @media(max-width:1046px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735909100169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n .bottom {\n width: 100vw;\n }\n }\n-@media(max-width:1122px){\n+@media(max-width:1139px){\n   .hide {\n display: none;\n   }\n   .bottom {\n"
+                },
+                {
+                    "date": 1735909121987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n .bottom {\n width: 100vw;\n }\n }\n-@media(max-width:1139px){\n+@media(max-width:1225px){\n   .hide {\n display: none;\n   }\n   .bottom {\n"
+                },
+                {
+                    "date": 1735909183448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1046px){\n+  @media(max-width:1025px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735909246648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1025px){\n+  @media(max-width:1035px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735909253965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n     }\n   \n   }\n \n-  @media(max-width:1035px){\n+  @media(max-width:1039px){\n .bar{\n   display: flex !important;\n   justify-content: center;\n   align-items: center;\n"
+                },
+                {
+                    "date": 1735909293013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   text-decoration: none !important;\n  \n }\n /* top nav Responsiveness */\n-@media(max-width:720px){\n+@media(max-width:1000px){\n   .hideRes {\n     display: none;\n   }\n   .topnavwidth{\n"
+                },
+                {
+                    "date": 1735909381677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,48 +38,70 @@\n .white-background {\n background-color: white;\n }\n /* bottom nav responsiveness */\n-@media(max-width:2000px){\n-  .widthof{\n+/* General Styling for Large Screens */\n+@media (max-width: 2000px) {\n+  .widthof {\n     width: 71vw;\n   }\n }\n-@media(max-width:1195px){\n-  .widthof{\n+\n+@media (max-width: 1195px) {\n+  .widthof {\n     width: auto;\n   }\n }\n-.bar{\n-  display: none;\n+\n+/* Adjusting Bottom Width for Medium Screens */\n+@media (max-width: 1528px) {\n+  .bottom {\n+    width: 100vw;\n+  }\n }\n-@media(max-width:1528px){\n-.bottom {\n-width: 100vw;\n-}\n-}\n-@media(max-width:1225px){\n+\n+/* Hiding Elements and Adjusting Layout for Small Screens */\n+@media (max-width: 1225px) {\n   .hide {\n-display: none;\n+    display: none;\n   }\n   .bottom {\n     width: 80vw;\n-    }\n-    .left-nav {\n-      font-size: 1rem;\n-    }\n-  \n   }\n+  .left-nav {\n+    font-size: 1rem;\n+  }\n+}\n \n-  @media(max-width:1039px){\n-.bar{\n-  display: flex !important;\n-  justify-content: center;\n-  align-items: center;\n+/* Mobile View: Display Bar and Hide Left Navigation */\n+@media (max-width: 1039px) {\n+  .bar {\n+    display: flex !important;\n+    justify-content: center;\n+    align-items: center;\n+  }\n+  .left-nav {\n+    display: none;\n+  }\n }\n-.left-nav{\n-  display: none;\n+\n+/* Extra Improvements for Mobile Screens */\n+@media (max-width: 768px) {\n+  .bottom {\n+    padding: 0 10px;\n+  }\n+  .widthof {\n+    width: 90vw;\n+  }\n }\n+\n+@media (max-width: 480px) {\n+  .bar {\n+    flex-direction: column;\n+    gap: 10px;\n+  }\n+}\n+\n    \n     } \n /* mobile view styling */\n     .offcanvas {\n"
+                },
+                {
+                    "date": 1735910828136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   }\n }\n \n /* Hiding Elements and Adjusting Layout for Small Screens */\n-@media (max-width: 1225px) {\n+@media (max-width: 1240px) {\n   .hide {\n     display: none;\n   }\n   .bottom {\n@@ -101,9 +101,9 @@\n   }\n }\n \n    \n-    } \n+    \n /* mobile view styling */\n     .offcanvas {\n       background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n       color: white;\n"
+                },
+                {
+                    "date": 1735910845131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   }\n }\n \n /* Hiding Elements and Adjusting Layout for Small Screens */\n-@media (max-width: 1240px) {\n+@media (max-width: 1250px) {\n   .hide {\n     display: none;\n   }\n   .bottom {\n"
+                },
+                {
+                    "date": 1735910865501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,9 +72,9 @@\n   }\n }\n \n /* Mobile View: Display Bar and Hide Left Navigation */\n-@media (max-width: 1039px) {\n+@media (max-width: 1095px) {\n   .bar {\n     display: flex !important;\n     justify-content: center;\n     align-items: center;\n"
+                },
+                {
+                    "date": 1735910901294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,8 +81,11 @@\n   }\n   .left-nav {\n     display: none;\n   }\n+  .hide {\n+    display: block;\n+  }\n }\n \n /* Extra Improvements for Mobile Screens */\n @media (max-width: 768px) {\n"
+                },
+                {
+                    "date": 1735910910453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,9 +82,9 @@\n   .left-nav {\n     display: none;\n   }\n   .hide {\n-    display: block;\n+    display: flex;\n   }\n }\n \n /* Extra Improvements for Mobile Screens */\n"
+                },
+                {
+                    "date": 1735911029925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,13 +45,13 @@\n     width: 71vw;\n   }\n }\n \n-@media (max-width: 1195px) {\n+/* @media (max-width: 1195px) {\n   .widthof {\n     width: auto;\n   }\n-}\n+} */\n \n /* Adjusting Bottom Width for Medium Screens */\n @media (max-width: 1528px) {\n   .bottom {\n@@ -81,11 +81,9 @@\n   }\n   .left-nav {\n     display: none;\n   }\n-  .hide {\n-    display: flex;\n-  }\n+\n }\n \n /* Extra Improvements for Mobile Screens */\n @media (max-width: 768px) {\n"
+                },
+                {
+                    "date": 1735911092999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,18 +45,18 @@\n     width: 71vw;\n   }\n }\n \n-/* @media (max-width: 1195px) {\n+@media (max-width: 1195px) {\n   .widthof {\n     width: auto;\n   }\n-} */\n+}\n \n /* Adjusting Bottom Width for Medium Screens */\n @media (max-width: 1528px) {\n   .bottom {\n-    width: 100vw;\n+    width: 97vw;\n   }\n }\n \n /* Hiding Elements and Adjusting Layout for Small Screens */\n"
+                },
+                {
+                    "date": 1735911266330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,8 +68,9 @@\n     width: 80vw;\n   }\n   .left-nav {\n     font-size: 1rem;\n+    display: block;\n   }\n }\n \n /* Mobile View: Display Bar and Hide Left Navigation */\n"
+                },
+                {
+                    "date": 1735911281392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n     width: 80vw;\n   }\n   .left-nav {\n     font-size: 1rem;\n-    display: block;\n+    display: flex;\n   }\n }\n \n /* Mobile View: Display Bar and Hide Left Navigation */\n"
+                },
+                {
+                    "date": 1735911324807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,42 +38,41 @@\n .white-background {\n background-color: white;\n }\n /* bottom nav responsiveness */\n-/* General Styling for Large Screens */\n-@media (max-width: 2000px) {\n-  .widthof {\n-    width: 71vw;\n-  }\n-}\n-\n-@media (max-width: 1195px) {\n-  .widthof {\n-    width: auto;\n-  }\n-}\n-\n-/* Adjusting Bottom Width for Medium Screens */\n-@media (max-width: 1528px) {\n-  .bottom {\n-    width: 97vw;\n-  }\n-}\n-\n-/* Hiding Elements and Adjusting Layout for Small Screens */\n-@media (max-width: 1250px) {\n+@media (max-width: 1225px) {\n   .hide {\n     display: none;\n   }\n   .bottom {\n     width: 80vw;\n   }\n   .left-nav {\n     font-size: 1rem;\n-    display: flex;\n+    display: block; /* Ensure left-nav remains visible */\n   }\n }\n \n+@media (max-width: 1039px) {\n+  .bar {\n+    display: flex !important;\n+    justify-content: center;\n+    align-items: center;\n+  }\n+  .left-nav {\n+    display: none; /* Intended behavior */\n+  }\n+  .logo {\n+    display: block; /* Ensure logo visibility */\n+  }\n+}\n+\n+/* Ensure no collapse or overflow issues */\n+.bottom, .widthof {\n+  min-width: 300px; /* Set a minimum width to prevent collapse */\n+}\n+\n+\n /* Mobile View: Display Bar and Hide Left Navigation */\n @media (max-width: 1095px) {\n   .bar {\n     display: flex !important;\n"
+                },
+                {
+                    "date": 1735911351991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     width: 80vw;\n   }\n   .left-nav {\n     font-size: 1rem;\n-    display: block; /* Ensure left-nav remains visible */\n+    display: flex; /* Ensure left-nav remains visible */\n   }\n }\n \n @media (max-width: 1039px) {\n"
+                },
+                {
+                    "date": 1735911491769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,11 +60,9 @@\n   }\n   .left-nav {\n     display: none; /* Intended behavior */\n   }\n-  .logo {\n-    display: block; /* Ensure logo visibility */\n-  }\n+\n }\n \n /* Ensure no collapse or overflow issues */\n .bottom, .widthof {\n"
+                },
+                {
+                    "date": 1735911503816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,39 +38,42 @@\n .white-background {\n background-color: white;\n }\n /* bottom nav responsiveness */\n-@media (max-width: 1225px) {\n+/* General Styling for Large Screens */\n+@media (max-width: 2000px) {\n+  .widthof {\n+    width: 71vw;\n+  }\n+}\n+\n+@media (max-width: 1195px) {\n+  .widthof {\n+    width: auto;\n+  }\n+}\n+\n+/* Adjusting Bottom Width for Medium Screens */\n+@media (max-width: 1528px) {\n+  .bottom {\n+    width: 97vw;\n+  }\n+}\n+\n+/* Hiding Elements and Adjusting Layout for Small Screens */\n+@media (max-width: 1250px) {\n   .hide {\n     display: none;\n   }\n   .bottom {\n     width: 80vw;\n   }\n   .left-nav {\n     font-size: 1rem;\n-    display: flex; /* Ensure left-nav remains visible */\n+    display: flex;\n   }\n }\n \n-@media (max-width: 1039px) {\n-  .bar {\n-    display: flex !important;\n-    justify-content: center;\n-    align-items: center;\n-  }\n-  .left-nav {\n-    display: none; /* Intended behavior */\n-  }\n-\n-}\n-\n-/* Ensure no collapse or overflow issues */\n-.bottom, .widthof {\n-  min-width: 300px; /* Set a minimum width to prevent collapse */\n-}\n-\n-\n /* Mobile View: Display Bar and Hide Left Navigation */\n @media (max-width: 1095px) {\n   .bar {\n     display: flex !important;\n"
+                },
+                {
+                    "date": 1735976642328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,180 @@\n+*{\n+  margin: 0;\n+  padding: 0;\n+}\n+body{\n+  overflow-x: hidden;\n+}\n+.register1{\n+  color: black !important;\n+}\n+\n+@media(max-width:1618px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: repeat(2,1fr);\n+  }\n+}\n+@media(max-width:770px){\n+  .search {\n+    display: grid;\n+    grid-template-columns: repeat(1,1fr);\n+   \n+  }\n+}\n+ a{\n+  text-decoration: none !important;\n+ \n+}\n+/* top nav Responsiveness */\n+@media(max-width:1000px){\n+  .hideRes {\n+    display: none;\n+  }\n+  .topnavwidth{\n+   width: auto;\n+  }\n+}\n+.white-background {\n+background-color: white;\n+}\n+/* bottom nav responsiveness */\n+/* General Styling for Large Screens */\n+@media (max-width: 2000px) {\n+  .widthof {\n+    width: 71vw;\n+  }\n+}\n+\n+@media (max-width: 1195px) {\n+  .widthof {\n+    width: auto;\n+  }\n+}\n+\n+/* Adjusting Bottom Width for Medium Screens */\n+@media (max-width: 1528px) {\n+  .bottom {\n+    width: 97vw;\n+  }\n+}\n+\n+/* Hiding Elements and Adjusting Layout for Small Screens */\n+@media (max-width: 1250px) {\n+  .hide {\n+    display: none;\n+  }\n+  .bottom {\n+    width: 80vw;\n+  }\n+  .left-nav {\n+    font-size: 1rem;\n+    display: flex;\n+  }\n+}\n+\n+/* Mobile View: Display Bar and Hide Left Navigation */\n+@media (max-width: 1095px) {\n+  .bar {\n+    display: flex !important;\n+    justify-content: center;\n+    align-items: center;\n+  }\n+  .left-nav {\n+    display: none;\n+  }\n+\n+}\n+\n+/* Extra Improvements for Mobile Screens */\n+@media (max-width: 768px) {\n+  .bottom {\n+    padding: 0 10px;\n+  }\n+  .widthof {\n+    width: 90vw;\n+  }\n+}\n+\n+@media (max-width: 480px) {\n+  .bar {\n+    flex-direction: column;\n+    gap: 10px;\n+  }\n+}\n+\n+   \n+    \n+/* mobile view styling */\n+    .offcanvas {\n+      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n+      color: white;\n+    }\n+    .cross {\n+      color: white !important;\n+    }\n+/* icons section */\n+    .slider-item {\n+      padding: 0 20px; /* Adjust gap between slides */\n+    }\n+    \n+    .slider-image {\n+      width: 100%; /* Ensures the images fit within the container */\n+      object-fit: contain; /* Prevents stretching of images */\n+    }\n+\n+    /* animation */\n+    .animate{\n+      animation: appear linear;\n+      animation-timeline: view();\n+      animation-range: entry 0 cover 40%;\n+    }\n+    @keyframes appear {\n+      from{\n+        opacity: 0;\n+        scale: 0.5;\n+      }\n+      to {\n+        opacity: 1;\n+        scale: 1;\n+      }\n+    }\n+\n+    /* styling for register slider */\n+    .breadcrumb-wrapper {\n+      position: relative; /* Needed for the pseudo-element to position properly */\n+      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n+      background-color: #098E68; /* Placeholder background (light gray) */\n+    \n+      padding: 20px; /* Adds some spacing */\n+     \n+    }\n+    \n+    .breadcrumb-wrapper::before {\n+      content: '';\n+      position: absolute;\n+      top: 0;\n+      left: -100%; /* Starts completely off-screen to the left */\n+      width: 100%;\n+      height: 100%;\n+      background-image: linear-gradient(\n+        to right,\n+        rgba(255, 255, 255, 0.3) 10%, \n+        rgba(255, 255, 255, 0) 50%, \n+        rgba(255, 255, 255, 0.3) 90%\n+      );\n+      background-size: 200% 100%; /* Double the width to allow for smooth sliding */\n+      animation: slide 3s linear infinite; /* Applies the shimmering animation */\n+    }\n+    \n+    /* Keyframes for the sliding effect */\n+    @keyframes slide {\n+      from {\n+        left: -100%; /* Start off-screen on the left */\n+      }\n+      to {\n+        left: 100%; /* Move off-screen to the right */\n+      }\n+    }\n+    \n+\n"
+                },
+                {
+                    "date": 1735986248488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n   }\n }\n \n /* Hiding Elements and Adjusting Layout for Small Screens */\n-@media (max-width: 1250px) {\n+@media (max-width: 1618px) {\n   .hide {\n     display: none;\n   }\n   .bottom {\n@@ -177,184 +177,4 @@\n       }\n     }\n     \n \n-*{\n-  margin: 0;\n-  padding: 0;\n-}\n-body{\n-  overflow-x: hidden;\n-}\n-.register1{\n-  color: black !important;\n-}\n-\n-@media(max-width:1618px){\n-  .search {\n-    display: grid;\n-    grid-template-columns: repeat(2,1fr);\n-  }\n-}\n-@media(max-width:770px){\n-  .search {\n-    display: grid;\n-    grid-template-columns: repeat(1,1fr);\n-   \n-  }\n-}\n- a{\n-  text-decoration: none !important;\n- \n-}\n-/* top nav Responsiveness */\n-@media(max-width:1000px){\n-  .hideRes {\n-    display: none;\n-  }\n-  .topnavwidth{\n-   width: auto;\n-  }\n-}\n-.white-background {\n-background-color: white;\n-}\n-/* bottom nav responsiveness */\n-/* General Styling for Large Screens */\n-@media (max-width: 2000px) {\n-  .widthof {\n-    width: 71vw;\n-  }\n-}\n-\n-@media (max-width: 1195px) {\n-  .widthof {\n-    width: auto;\n-  }\n-}\n-\n-/* Adjusting Bottom Width for Medium Screens */\n-@media (max-width: 1528px) {\n-  .bottom {\n-    width: 97vw;\n-  }\n-}\n-\n-/* Hiding Elements and Adjusting Layout for Small Screens */\n-@media (max-width: 1250px) {\n-  .hide {\n-    display: none;\n-  }\n-  .bottom {\n-    width: 80vw;\n-  }\n-  .left-nav {\n-    font-size: 1rem;\n-    display: flex;\n-  }\n-}\n-\n-/* Mobile View: Display Bar and Hide Left Navigation */\n-@media (max-width: 1095px) {\n-  .bar {\n-    display: flex !important;\n-    justify-content: center;\n-    align-items: center;\n-  }\n-  .left-nav {\n-    display: none;\n-  }\n-\n-}\n-\n-/* Extra Improvements for Mobile Screens */\n-@media (max-width: 768px) {\n-  .bottom {\n-    padding: 0 10px;\n-  }\n-  .widthof {\n-    width: 90vw;\n-  }\n-}\n-\n-@media (max-width: 480px) {\n-  .bar {\n-    flex-direction: column;\n-    gap: 10px;\n-  }\n-}\n-\n-   \n-    \n-/* mobile view styling */\n-    .offcanvas {\n-      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n-      color: white;\n-    }\n-    .cross {\n-      color: white !important;\n-    }\n-/* icons section */\n-    .slider-item {\n-      padding: 0 20px; /* Adjust gap between slides */\n-    }\n-    \n-    .slider-image {\n-      width: 100%; /* Ensures the images fit within the container */\n-      object-fit: contain; /* Prevents stretching of images */\n-    }\n-\n-    /* animation */\n-    .animate{\n-      animation: appear linear;\n-      animation-timeline: view();\n-      animation-range: entry 0 cover 40%;\n-    }\n-    @keyframes appear {\n-      from{\n-        opacity: 0;\n-        scale: 0.5;\n-      }\n-      to {\n-        opacity: 1;\n-        scale: 1;\n-      }\n-    }\n-\n-    /* styling for register slider */\n-    .breadcrumb-wrapper {\n-      position: relative; /* Needed for the pseudo-element to position properly */\n-      overflow: hidden; /* Ensures the shimmer stays within the element's boundaries */\n-      background-color: orange; /* Placeholder background (light gray) */\n-    \n-      padding: 20px; /* Adds some spacing */\n-     \n-    }\n-    \n-    .breadcrumb-wrapper::before {\n-      content: '';\n-      position: absolute;\n-      top: 0;\n-      left: -100%; /* Starts completely off-screen to the left */\n-      width: 100%;\n-      height: 100%;\n-      background-image: linear-gradient(\n-        to right,\n-        rgba(255, 255, 255, 0.3) 10%, \n-        rgba(255, 255, 255, 0) 50%, \n-        rgba(255, 255, 255, 0.3) 90%\n-      );\n-      background-size: 200% 100%; /* Double the width to allow for smooth sliding */\n-      animation: slide 3s linear infinite; /* Applies the shimmering animation */\n-    }\n-    \n-    /* Keyframes for the sliding effect */\n-    @keyframes slide {\n-      from {\n-        left: -100%; /* Start off-screen on the left */\n-      }\n-      to {\n-        left: 100%; /* Move off-screen to the right */\n-      }\n-    }\n-    \n-\n"
+                },
+                {
+                    "date": 1735997444199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-@media (max-width: 2000px) {\n+@media (max-width: 1800px) {\n   .widthof {\n     width: 71vw;\n   }\n }\n"
+                },
+                {
+                    "date": 1735997453994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-@media (max-width: 1800px) {\n+@media (max-width: 1900px) {\n   .widthof {\n     width: 71vw;\n   }\n }\n"
+                },
+                {
+                    "date": 1735997479068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-@media (max-width: 1900px) {\n+@media (max-width: 1618px) {\n   .widthof {\n     width: 71vw;\n   }\n }\n"
+                },
+                {
+                    "date": 1735997495940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n @media (max-width: 1618px) {\n   .widthof {\n-    width: 71vw;\n+    width: 78vw;\n   }\n }\n \n @media (max-width: 1195px) {\n"
+                },
+                {
+                    "date": 1735997512964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,14 +44,14 @@\n   .widthof {\n     width: 78vw;\n   }\n }\n-\n+/* \n @media (max-width: 1195px) {\n   .widthof {\n     width: auto;\n   }\n-}\n+} */\n \n /* Adjusting Bottom Width for Medium Screens */\n @media (max-width: 1528px) {\n   .bottom {\n"
+                },
+                {
+                    "date": 1735997522934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,13 +39,13 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-@media (max-width: 1618px) {\n+/* @media (max-width: 1618px) {\n   .widthof {\n     width: 78vw;\n   }\n-}\n+} */\n /* \n @media (max-width: 1195px) {\n   .widthof {\n     width: auto;\n"
+                },
+                {
+                    "date": 1735997603036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-/* @media (max-width: 1618px) {\n+@media (max-width: 1618px) {\n   .widthof {\n     width: 78vw;\n   }\n } */\n@@ -49,9 +49,9 @@\n @media (max-width: 1195px) {\n   .widthof {\n     width: auto;\n   }\n-} */\n+}\n \n /* Adjusting Bottom Width for Medium Screens */\n @media (max-width: 1528px) {\n   .bottom {\n"
+                },
+                {
+                    "date": 1735997618343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,10 +43,10 @@\n @media (max-width: 1618px) {\n   .widthof {\n     width: 78vw;\n   }\n-} */\n-/* \n+} \n+\n @media (max-width: 1195px) {\n   .widthof {\n     width: auto;\n   }\n"
+                },
+                {
+                    "date": 1735997630612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,11 +39,11 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-@media (max-width: 1618px) {\n+@media (max-width: 1800px) {\n   .widthof {\n-    width: 78vw;\n+    width: 71vw;\n   }\n } \n \n @media (max-width: 1195px) {\n"
+                },
+                {
+                    "date": 1735997643383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n /* General Styling for Large Screens */\n @media (max-width: 1800px) {\n   .widthof {\n     width: 71vw;\n+    background-color: green;\n   }\n } \n \n @media (max-width: 1195px) {\n"
+                },
+                {
+                    "date": 1735997672170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-@media (max-width: 1800px) {\n+@media (max-width: 1900px) {\n   .widthof {\n     width: 71vw;\n     background-color: green;\n   }\n"
+                },
+                {
+                    "date": 1735997687460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n background-color: white;\n }\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n-@media (max-width: 1900px) {\n+@media (max-width: 1940px) {\n   .widthof {\n     width: 71vw;\n     background-color: green;\n   }\n"
+                },
+                {
+                    "date": 1735997697420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n @media (max-width: 1940px) {\n   .widthof {\n-    width: 71vw;\n+    width: 75vw;\n     background-color: green;\n   }\n } \n \n"
+                },
+                {
+                    "date": 1735997708225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n @media (max-width: 1940px) {\n   .widthof {\n-    width: 75vw;\n+    width: 80vw;\n     background-color: green;\n   }\n } \n \n"
+                },
+                {
+                    "date": 1735997718828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n /* bottom nav responsiveness */\n /* General Styling for Large Screens */\n @media (max-width: 1940px) {\n   .widthof {\n-    width: 80vw;\n+    width: 78vw;\n     background-color: green;\n   }\n } \n \n"
+                },
+                {
+                    "date": 1735997746259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n /* General Styling for Large Screens */\n @media (max-width: 1940px) {\n   .widthof {\n     width: 78vw;\n-    background-color: green;\n+  \n   }\n } \n \n @media (max-width: 1195px) {\n"
+                },
+                {
+                    "date": 1736870956688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,15 @@\n     width: 78vw;\n   \n   }\n } \n+input:-webkit-autofill,\n+textarea:-webkit-autofill,\n+select:-webkit-autofill {\n+  background-color: transparent !important;\n+  color: #ffffff !important;\n+  transition: background-color 5000s ease-in-out 0s;\n+}\n \n @media (max-width: 1195px) {\n   .widthof {\n     width: auto;\n"
+                },
+                {
+                    "date": 1736870983955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n input:-webkit-autofill,\n textarea:-webkit-autofill,\n select:-webkit-autofill {\n   background-color: transparent !important;\n-  color: #ffffff !important;\n+ \n   transition: background-color 5000s ease-in-out 0s;\n }\n \n @media (max-width: 1195px) {\n"
+                },
+                {
+                    "date": 1736871101379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n input:-webkit-autofill,\n textarea:-webkit-autofill,\n select:-webkit-autofill {\n   background-color: transparent !important;\n- \n+  color: #ffffff !important;\n   transition: background-color 5000s ease-in-out 0s;\n }\n \n @media (max-width: 1195px) {\n"
+                },
+                {
+                    "date": 1736871215947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n } \n input:-webkit-autofill,\n textarea:-webkit-autofill,\n select:-webkit-autofill {\n-  background-color: transparent !important;\n+  background-color: blue !important;\n   color: #ffffff !important;\n   transition: background-color 5000s ease-in-out 0s;\n }\n \n"
+                },
+                {
+                    "date": 1736871230902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n } \n input:-webkit-autofill,\n textarea:-webkit-autofill,\n select:-webkit-autofill {\n-  background-color: blue !important;\n+  background-color: transparent !important;\n   color: #ffffff !important;\n   transition: background-color 5000s ease-in-out 0s;\n }\n \n"
+                },
+                {
+                    "date": 1736871238306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n input:-webkit-autofill,\n textarea:-webkit-autofill,\n select:-webkit-autofill {\n   background-color: transparent !important;\n-  color: #ffffff !important;\n+  color: black !important;\n   transition: background-color 5000s ease-in-out 0s;\n }\n \n @media (max-width: 1195px) {\n"
+                }
+            ],
+            "date": 1735102717430,
+            "name": "Commit-0",
+            "content": "*{\n  margin: 0;\n  padding: 0;\n}\nbody{\n  overflow-x: hidden;\n}\n/* top nav Responsiveness */\n@media(max-width:720px){\n  .hideRes {\n    display: none;\n  }\n  .topnavwidth{\n   width: auto;\n  }\n}\n.white-background {\nbackground-color: white;\n}\n/* bottom nav responsiveness */\n.bar{\n  display: none;\n}\n@media(max-width:1528px){\n.bottom {\nwidth: 100vw;\n}\n}\n@media(max-width:1225px){\n  .hide {\ndisplay: none;\n  }\n  .bottom {\n    width: 80vw;\n    }\n    .left-nav {\n      font-size: 1rem;\n    }\n  \n  }\n\n  @media(max-width:1046px){\n.bar{\n  display: flex !important;\n  justify-content: center;\n  align-items: center;\n}\n.left-nav{\n  display: none;\n}\n   \n    } \n\n    /* mobile view styling */\n    .offcanvas {\n      background-color: rgba(170, 157, 157, 0.753) !important; /* Replace with your desired color */\n      color: white;\n    }\n    .cross {\n      color: white !important;\n    }\n\n    /* icons section */\n    .slider-item {\n      padding: 0 10px; /* Adjust gap between slides */\n    }\n    \n    .slider-image {\n      width: 100%; /* Ensures the images fit within the container */\n      object-fit: contain; /* Prevents stretching of images */\n    }\n    "
+        }
+    ]
+}
