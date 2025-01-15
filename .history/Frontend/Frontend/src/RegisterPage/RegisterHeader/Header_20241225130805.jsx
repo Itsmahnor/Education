@@ -1,9 +1,0 @@
-import React from 'react'
-
-export const Header = () => {
-  return (
-    <div class="breadcrumb-wrapper h-[30vh]">
-    Breadcrumb Content Goes Here
-  </div>
-  )
-}
